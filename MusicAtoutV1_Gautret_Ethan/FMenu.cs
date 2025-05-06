@@ -1,67 +1,98 @@
-﻿using System;
-using System.Collections.Generic;
-using System.ComponentModel;
-using System.Data;
-using System.Drawing;
-using System.Linq;
-using System.Text;
-using System.Threading.Tasks;
-using System.Windows.Forms;
+using MusicAtoutV1_Gautret_Ethan.Models;
 
 namespace MusicAtoutV1_Gautret_Ethan
 {
-    public partial class FMenu : Form
+    public partial class Fmenu : Form
     {
-        public FMenu()
+        public Fmenu()
         {
             InitializeComponent();
         }
 
-        private void villeToolStripMenuItem_Click(object sender, EventArgs e)
+        private void villesToolStripMenuItem_Click(object sender, EventArgs e)
         {
-            Form1 Form1 = new Form1();
-            Form1.Visible = true;
+            FVille maForm = new FVille();
+            maForm.Show();
         }
 
         private void sallesToolStripMenuItem_Click(object sender, EventArgs e)
         {
-            FSalle FSalle = new FSalle();
-            FSalle.Visible = true;
-        }
-
-        private void FMenu_Load(object sender, EventArgs e)
-        {
-
+            FSalles fSalles = new FSalles();
+            fSalles.Show();
         }
 
         private void batimentsToolStripMenuItem_Click(object sender, EventArgs e)
         {
-            FBatiment FBatiment = new FBatiment();
-            FBatiment.Visible = true;
+            FBatiments fBatiments = new FBatiments();
+            fBatiments.Show();
         }
 
         private void typesDoeuvreToolStripMenuItem_Click(object sender, EventArgs e)
         {
-            FType FType = new FType();
-            FType.Visible = true;
+            FTypesOeuvres fTypesOeuvres = new FTypesOeuvres();
+            fTypesOeuvres.Show();
         }
 
-        private void parNationalitéToolStripMenuItem_Click(object sender, EventArgs e)
+        private void parNationalit�ToolStripMenuItem_Click(object sender, EventArgs e)
         {
-            FCompositeurNation FCompositeurNation = new FCompositeurNation();
-            FCompositeurNation.Visible = true;
+            FCompositeurNation fCompositeurNation = new FCompositeurNation();
+            fCompositeurNation.Show();
         }
 
         private void parStyleToolStripMenuItem_Click(object sender, EventArgs e)
         {
-            FStyle FStyle = new FStyle();
-            FStyle.Visible = true;
+            FCompositeurStyle fCompositeurStyle = new FCompositeurStyle();
+            fCompositeurStyle.Show();
         }
 
-        private void oeuvreToolStripMenuItem_Click(object sender, EventArgs e)
+        private void oeuvresToolStripMenuItem_Click(object sender, EventArgs e)
         {
-            FChoixOeuvre FChoixOeuvre = new FChoixOeuvre();
-            FChoixOeuvre.Visible = true;
+            FOeuvreCompositeur fOeuvreCompositeur = new FOeuvreCompositeur();
+            fOeuvreCompositeur.Show();
+        }
+
+        private void gestionToolStripMenuItem_Click(object sender, EventArgs e)
+        {
+            FAjoutModifCompositeur fAjoutModifCompositeur = new FAjoutModifCompositeur();
+            fAjoutModifCompositeur.ShowDialog();
+        }
+
+        private void Fmenu_Load(object sender, EventArgs e)
+        {
+            if (ModelProjet.UtilisateurConnecte.Droits >= 2)
+            {
+                gestionToolStripMenuItem.Visible = true;
+            }
+            else
+            {
+                gestionToolStripMenuItem.Visible = false;
+            }
+
+        }
+
+        private void button1_Click(object sender, EventArgs e)
+        {
+            this.Close();
+
+            Thread t = new Thread(() =>
+            {
+                Application.Run(new FConnexion());
+            });
+
+            t.SetApartmentState(ApartmentState.STA);
+            t.Start();
+        }
+
+        private void changementMdpToolStripMenuItem_Click(object sender, EventArgs e)
+        {
+            FChangementMdp fChangementMdp = new FChangementMdp();
+            fChangementMdp.ShowDialog();
+        }
+
+        private void gestionToolStripMenuItem_Click_1(object sender, EventArgs e)
+        {
+            FGestionUtilisateurs fGestionUtilisateurs = new FGestionUtilisateurs();
+            fGestionUtilisateurs.ShowDialog();
         }
     }
 }

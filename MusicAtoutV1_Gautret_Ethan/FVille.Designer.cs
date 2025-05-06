@@ -1,14 +1,14 @@
-﻿namespace MusicAtoutV1_Gautret_Ethan
+﻿namespace MusicAtoutV1_Gautret_Ethan.Models
 {
-    partial class Form1
+    partial class FVille
     {
         /// <summary>
-        ///  Required designer variable.
+        /// Required designer variable.
         /// </summary>
         private System.ComponentModel.IContainer components = null;
 
         /// <summary>
-        ///  Clean up any resources being used.
+        /// Clean up any resources being used.
         /// </summary>
         /// <param name="disposing">true if managed resources should be disposed; otherwise, false.</param>
         protected override void Dispose(bool disposing)
@@ -23,51 +23,51 @@
         #region Windows Form Designer generated code
 
         /// <summary>
-        ///  Required method for Designer support - do not modify
-        ///  the contents of this method with the code editor.
+        /// Required method for Designer support - do not modify
+        /// the contents of this method with the code editor.
         /// </summary>
         private void InitializeComponent()
         {
             components = new System.ComponentModel.Container();
-            dgvVille = new DataGridView();
             bsVille = new BindingSource(components);
-            ((System.ComponentModel.ISupportInitialize)dgvVille).BeginInit();
+            dgvVille = new DataGridView();
             ((System.ComponentModel.ISupportInitialize)bsVille).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)dgvVille).BeginInit();
             SuspendLayout();
+            // 
+            // bsVille
+            // 
+            bsVille.CurrentChanged += bindingSource1_CurrentChanged;
             // 
             // dgvVille
             // 
             dgvVille.AllowUserToAddRows = false;
             dgvVille.AllowUserToDeleteRows = false;
             dgvVille.ColumnHeadersHeightSizeMode = DataGridViewColumnHeadersHeightSizeMode.AutoSize;
-            dgvVille.Location = new Point(251, 230);
+            dgvVille.Location = new Point(25, 12);
             dgvVille.Name = "dgvVille";
             dgvVille.ReadOnly = true;
-            dgvVille.Size = new Size(485, 173);
+            dgvVille.Size = new Size(751, 416);
             dgvVille.TabIndex = 0;
-            dgvVille.CellContentClick += dgvVille_CellContentClick;
+                //dgvVille.CellContentClick += this.dgvVille_CellContentClick;
             // 
-            // bsVille
-            // 
-            bsVille.CurrentChanged += bsVille_CurrentChanged;
-            // 
-            // Form1
+            // FVille
             // 
             AutoScaleDimensions = new SizeF(7F, 15F);
             AutoScaleMode = AutoScaleMode.Font;
-            ClientSize = new Size(1000, 552);
+            ClientSize = new Size(800, 450);
             Controls.Add(dgvVille);
-            Name = "Form1";
-            Text = "Form1";
-            Load += Form1_Load;
-            ((System.ComponentModel.ISupportInitialize)dgvVille).EndInit();
+            Name = "FVille";
+            Text = "FVille";
+            Load += FVille_Load;
             ((System.ComponentModel.ISupportInitialize)bsVille).EndInit();
+            ((System.ComponentModel.ISupportInitialize)dgvVille).EndInit();
             ResumeLayout(false);
         }
 
         #endregion
-        private DataGridView dgvVille;
-        private MenuStrip menuStrip1;
+
         private BindingSource bsVille;
+        private DataGridView dgvVille;
     }
 }

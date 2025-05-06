@@ -1,14 +1,14 @@
 ﻿namespace MusicAtoutV1_Gautret_Ethan
 {
-    partial class FMenu
+    partial class Fmenu
     {
         /// <summary>
-        /// Required designer variable.
+        ///  Required designer variable.
         /// </summary>
         private System.ComponentModel.IContainer components = null;
 
         /// <summary>
-        /// Clean up any resources being used.
+        ///  Clean up any resources being used.
         /// </summary>
         /// <param name="disposing">true if managed resources should be disposed; otherwise, false.</param>
         protected override void Dispose(bool disposing)
@@ -23,46 +23,53 @@
         #region Windows Form Designer generated code
 
         /// <summary>
-        /// Required method for Designer support - do not modify
-        /// the contents of this method with the code editor.
+        ///  Required method for Designer support - do not modify
+        ///  the contents of this method with the code editor.
         /// </summary>
         private void InitializeComponent()
         {
-            menuStrip1 = new MenuStrip();
-            listeToolStripMenuItem = new ToolStripMenuItem();
-            villeToolStripMenuItem = new ToolStripMenuItem();
+            System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(Fmenu));
+            MenuUser1 = new MenuStrip();
+            listesToolStripMenuItem = new ToolStripMenuItem();
+            villesToolStripMenuItem = new ToolStripMenuItem();
             sallesToolStripMenuItem = new ToolStripMenuItem();
             batimentsToolStripMenuItem = new ToolStripMenuItem();
             typesDoeuvreToolStripMenuItem = new ToolStripMenuItem();
-            compositeursToolStripMenuItem = new ToolStripMenuItem();
+            compositeurToolStripMenuItem = new ToolStripMenuItem();
             parNationalitéToolStripMenuItem = new ToolStripMenuItem();
             parStyleToolStripMenuItem = new ToolStripMenuItem();
-            oeuvreToolStripMenuItem = new ToolStripMenuItem();
-            menuStrip1.SuspendLayout();
+            oeuvresToolStripMenuItem = new ToolStripMenuItem();
+            utilisateursToolStripMenuItem = new ToolStripMenuItem();
+            gestionToolStripMenuItem = new ToolStripMenuItem();
+            changementMdpToolStripMenuItem = new ToolStripMenuItem();
+            pictureBox1 = new PictureBox();
+            btn_deco = new Button();
+            MenuUser1.SuspendLayout();
+            ((System.ComponentModel.ISupportInitialize)pictureBox1).BeginInit();
             SuspendLayout();
             // 
-            // menuStrip1
+            // MenuUser1
             // 
-            menuStrip1.Items.AddRange(new ToolStripItem[] { listeToolStripMenuItem, compositeursToolStripMenuItem, oeuvreToolStripMenuItem });
-            menuStrip1.Location = new Point(0, 0);
-            menuStrip1.Name = "menuStrip1";
-            menuStrip1.Size = new Size(800, 24);
-            menuStrip1.TabIndex = 0;
-            menuStrip1.Text = "menuStrip1";
+            MenuUser1.Items.AddRange(new ToolStripItem[] { listesToolStripMenuItem, compositeurToolStripMenuItem, oeuvresToolStripMenuItem, utilisateursToolStripMenuItem });
+            MenuUser1.Location = new Point(0, 0);
+            MenuUser1.Name = "MenuUser1";
+            MenuUser1.Size = new Size(907, 24);
+            MenuUser1.TabIndex = 0;
+            MenuUser1.Text = "menuStrip1";
             // 
-            // listeToolStripMenuItem
+            // listesToolStripMenuItem
             // 
-            listeToolStripMenuItem.DropDownItems.AddRange(new ToolStripItem[] { villeToolStripMenuItem, sallesToolStripMenuItem, batimentsToolStripMenuItem, typesDoeuvreToolStripMenuItem });
-            listeToolStripMenuItem.Name = "listeToolStripMenuItem";
-            listeToolStripMenuItem.Size = new Size(43, 20);
-            listeToolStripMenuItem.Text = "Liste";
+            listesToolStripMenuItem.DropDownItems.AddRange(new ToolStripItem[] { villesToolStripMenuItem, sallesToolStripMenuItem, batimentsToolStripMenuItem, typesDoeuvreToolStripMenuItem });
+            listesToolStripMenuItem.Name = "listesToolStripMenuItem";
+            listesToolStripMenuItem.Size = new Size(48, 20);
+            listesToolStripMenuItem.Text = "Listes";
             // 
-            // villeToolStripMenuItem
+            // villesToolStripMenuItem
             // 
-            villeToolStripMenuItem.Name = "villeToolStripMenuItem";
-            villeToolStripMenuItem.Size = new Size(152, 22);
-            villeToolStripMenuItem.Text = "Villes";
-            villeToolStripMenuItem.Click += villeToolStripMenuItem_Click;
+            villesToolStripMenuItem.Name = "villesToolStripMenuItem";
+            villesToolStripMenuItem.Size = new Size(152, 22);
+            villesToolStripMenuItem.Text = "Villes";
+            villesToolStripMenuItem.Click += villesToolStripMenuItem_Click;
             // 
             // sallesToolStripMenuItem
             // 
@@ -85,60 +92,111 @@
             typesDoeuvreToolStripMenuItem.Text = "Types d'oeuvre";
             typesDoeuvreToolStripMenuItem.Click += typesDoeuvreToolStripMenuItem_Click;
             // 
-            // compositeursToolStripMenuItem
+            // compositeurToolStripMenuItem
             // 
-            compositeursToolStripMenuItem.DropDownItems.AddRange(new ToolStripItem[] { parNationalitéToolStripMenuItem, parStyleToolStripMenuItem });
-            compositeursToolStripMenuItem.Name = "compositeursToolStripMenuItem";
-            compositeursToolStripMenuItem.Size = new Size(93, 20);
-            compositeursToolStripMenuItem.Text = "Compositeurs";
+            compositeurToolStripMenuItem.DropDownItems.AddRange(new ToolStripItem[] { parNationalitéToolStripMenuItem, parStyleToolStripMenuItem });
+            compositeurToolStripMenuItem.Name = "compositeurToolStripMenuItem";
+            compositeurToolStripMenuItem.Size = new Size(88, 20);
+            compositeurToolStripMenuItem.Text = "Compositeur";
             // 
             // parNationalitéToolStripMenuItem
             // 
             parNationalitéToolStripMenuItem.Name = "parNationalitéToolStripMenuItem";
-            parNationalitéToolStripMenuItem.Size = new Size(180, 22);
+            parNationalitéToolStripMenuItem.Size = new Size(150, 22);
             parNationalitéToolStripMenuItem.Text = "Par nationalité";
             parNationalitéToolStripMenuItem.Click += parNationalitéToolStripMenuItem_Click;
             // 
             // parStyleToolStripMenuItem
             // 
             parStyleToolStripMenuItem.Name = "parStyleToolStripMenuItem";
-            parStyleToolStripMenuItem.Size = new Size(180, 22);
+            parStyleToolStripMenuItem.Size = new Size(150, 22);
             parStyleToolStripMenuItem.Text = "Par style";
             parStyleToolStripMenuItem.Click += parStyleToolStripMenuItem_Click;
             // 
-            // oeuvreToolStripMenuItem
+            // oeuvresToolStripMenuItem
             // 
-            oeuvreToolStripMenuItem.Name = "oeuvreToolStripMenuItem";
-            oeuvreToolStripMenuItem.Size = new Size(57, 20);
-            oeuvreToolStripMenuItem.Text = "Oeuvre";
-            oeuvreToolStripMenuItem.Click += oeuvreToolStripMenuItem_Click;
+            oeuvresToolStripMenuItem.Name = "oeuvresToolStripMenuItem";
+            oeuvresToolStripMenuItem.Size = new Size(62, 20);
+            oeuvresToolStripMenuItem.Text = "Oeuvres";
+            oeuvresToolStripMenuItem.Click += oeuvresToolStripMenuItem_Click;
             // 
-            // FMenu
+            // utilisateursToolStripMenuItem
+            // 
+            utilisateursToolStripMenuItem.DropDownItems.AddRange(new ToolStripItem[] { gestionToolStripMenuItem, changementMdpToolStripMenuItem });
+            utilisateursToolStripMenuItem.Name = "utilisateursToolStripMenuItem";
+            utilisateursToolStripMenuItem.Size = new Size(77, 20);
+            utilisateursToolStripMenuItem.Text = "Utilisateurs";
+            // 
+            // gestionToolStripMenuItem
+            // 
+            gestionToolStripMenuItem.Name = "gestionToolStripMenuItem";
+            gestionToolStripMenuItem.Size = new Size(180, 22);
+            gestionToolStripMenuItem.Text = "Gestion";
+            gestionToolStripMenuItem.Click += gestionToolStripMenuItem_Click_1;
+            // 
+            // changementMdpToolStripMenuItem
+            // 
+            changementMdpToolStripMenuItem.Name = "changementMdpToolStripMenuItem";
+            changementMdpToolStripMenuItem.Size = new Size(180, 22);
+            changementMdpToolStripMenuItem.Text = "Changement mdp";
+            changementMdpToolStripMenuItem.Click += changementMdpToolStripMenuItem_Click;
+            // 
+            // pictureBox1
+            // 
+            pictureBox1.Anchor = AnchorStyles.None;
+            pictureBox1.Image = (Image)resources.GetObject("pictureBox1.Image");
+            pictureBox1.Location = new Point(54, 66);
+            pictureBox1.Name = "pictureBox1";
+            pictureBox1.Size = new Size(760, 361);
+            pictureBox1.TabIndex = 1;
+            pictureBox1.TabStop = false;
+            // 
+            // btn_deco
+            // 
+            btn_deco.BackColor = Color.IndianRed;
+            btn_deco.Location = new Point(26, 462);
+            btn_deco.Name = "btn_deco";
+            btn_deco.Size = new Size(92, 23);
+            btn_deco.TabIndex = 2;
+            btn_deco.Text = "Déconnexion";
+            btn_deco.UseVisualStyleBackColor = false;
+            btn_deco.Click += button1_Click;
+            // 
+            // Fmenu
             // 
             AutoScaleDimensions = new SizeF(7F, 15F);
             AutoScaleMode = AutoScaleMode.Font;
-            ClientSize = new Size(800, 450);
-            Controls.Add(menuStrip1);
-            MainMenuStrip = menuStrip1;
-            Name = "FMenu";
+            ClientSize = new Size(907, 505);
+            Controls.Add(btn_deco);
+            Controls.Add(pictureBox1);
+            Controls.Add(MenuUser1);
+            MainMenuStrip = MenuUser1;
+            Name = "Fmenu";
             Text = "FMenu";
-            menuStrip1.ResumeLayout(false);
-            menuStrip1.PerformLayout();
+            Load += Fmenu_Load;
+            MenuUser1.ResumeLayout(false);
+            MenuUser1.PerformLayout();
+            ((System.ComponentModel.ISupportInitialize)pictureBox1).EndInit();
             ResumeLayout(false);
             PerformLayout();
         }
 
         #endregion
 
-        private MenuStrip menuStrip1;
-        private ToolStripMenuItem listeToolStripMenuItem;
-        private ToolStripMenuItem villeToolStripMenuItem;
+        private MenuStrip MenuUser1;
+        private ToolStripMenuItem listesToolStripMenuItem;
+        private ToolStripMenuItem villesToolStripMenuItem;
         private ToolStripMenuItem sallesToolStripMenuItem;
         private ToolStripMenuItem batimentsToolStripMenuItem;
         private ToolStripMenuItem typesDoeuvreToolStripMenuItem;
-        private ToolStripMenuItem compositeursToolStripMenuItem;
+        private PictureBox pictureBox1;
+        private ToolStripMenuItem compositeurToolStripMenuItem;
         private ToolStripMenuItem parNationalitéToolStripMenuItem;
         private ToolStripMenuItem parStyleToolStripMenuItem;
-        private ToolStripMenuItem oeuvreToolStripMenuItem;
+        private ToolStripMenuItem oeuvresToolStripMenuItem;
+        private ToolStripMenuItem utilisateursToolStripMenuItem;
+        private ToolStripMenuItem gestionToolStripMenuItem;
+        private Button btn_deco;
+        private ToolStripMenuItem changementMdpToolStripMenuItem;
     }
 }

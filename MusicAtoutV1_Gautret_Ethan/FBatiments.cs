@@ -11,29 +11,26 @@ using System.Windows.Forms;
 
 namespace MusicAtoutV1_Gautret_Ethan
 {
-    public partial class FSalle : Form
+    public partial class FBatiments : Form
     {
-        public FSalle()
+        public FBatiments()
         {
             InitializeComponent();
         }
 
+        public void FBatiments_Load(object sender, EventArgs e)
+        {
+            bsBatiments.DataSource = ModelProjet.listeBatiment();
+            dgvBatiments.DataSource = bsBatiments;
+        }
 
-        private void bsSalle_CurrentChanged(object sender, EventArgs e)
+        private void bsBatiments_CurrentChanged(object sender, EventArgs e)
         {
 
         }
 
-        private void dgvSalle_CellContentClick(object sender, DataGridViewCellEventArgs e)
+        private void dgvBatiments_CellContentClick(object sender, DataGridViewCellEventArgs e)
         {
-
-        }
-
-        private void FSalle_Load_1(object sender, EventArgs e)
-        {
-
-            bsSalle.DataSource = ModelProjet.listeSalle();
-            dgvSalle.DataSource = bsSalle;
 
         }
     }

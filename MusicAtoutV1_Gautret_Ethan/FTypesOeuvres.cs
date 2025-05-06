@@ -11,17 +11,17 @@ using System.Windows.Forms;
 
 namespace MusicAtoutV1_Gautret_Ethan
 {
-    public partial class FType : Form
+    public partial class FTypesOeuvres : Form
     {
-        public FType()
+        public FTypesOeuvres()
         {
             InitializeComponent();
         }
 
-        private void FType_Load(object sender, EventArgs e)
+        public void FTypesOeuvres_Load(object sender, EventArgs e)
         {
-            bsType.DataSource = ModelProjet.listeTypeoeuvre();
-            dgvType.DataSource = bsType;
+            bsTO.DataSource = ModelProjet.listeTypeoeuvre();
+            dgvTO.DataSource = bsTO;
         }
     }
 }

@@ -29,42 +29,51 @@
         private void InitializeComponent()
         {
             components = new System.ComponentModel.Container();
-            bsCompo = new BindingSource(components);
-            dgvCompo = new DataGridView();
             cboNation = new ComboBox();
+            label1 = new Label();
+            dgvCompositeur = new DataGridView();
+            bsCompositeur = new BindingSource(components);
             bsNation = new BindingSource(components);
             button1 = new Button();
-            button2 = new Button();
-            button3 = new Button();
-            button4 = new Button();
-            ((System.ComponentModel.ISupportInitialize)bsCompo).BeginInit();
-            ((System.ComponentModel.ISupportInitialize)dgvCompo).BeginInit();
+            btAjout = new Button();
+            btModif = new Button();
+            btSupp = new Button();
+            ((System.ComponentModel.ISupportInitialize)dgvCompositeur).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)bsCompositeur).BeginInit();
             ((System.ComponentModel.ISupportInitialize)bsNation).BeginInit();
             SuspendLayout();
-            // 
-            // bsCompo
-            // 
-            bsCompo.CurrentChanged += bsCompo_CurrentChanged;
-            // 
-            // dgvCompo
-            // 
-            dgvCompo.AllowUserToAddRows = false;
-            dgvCompo.AllowUserToDeleteRows = false;
-            dgvCompo.ColumnHeadersHeightSizeMode = DataGridViewColumnHeadersHeightSizeMode.AutoSize;
-            dgvCompo.Location = new Point(12, 50);
-            dgvCompo.Name = "dgvCompo";
-            dgvCompo.ReadOnly = true;
-            dgvCompo.Size = new Size(776, 388);
-            dgvCompo.TabIndex = 0;
             // 
             // cboNation
             // 
             cboNation.FormattingEnabled = true;
-            cboNation.Location = new Point(22, 15);
+            cboNation.Location = new Point(86, 8);
             cboNation.Name = "cboNation";
             cboNation.Size = new Size(121, 23);
-            cboNation.TabIndex = 1;
-            cboNation.SelectedIndexChanged += cboNation_SelectedIndexChanged;
+            cboNation.TabIndex = 0;
+            // 
+            // label1
+            // 
+            label1.AutoSize = true;
+            label1.Location = new Point(6, 11);
+            label1.Name = "label1";
+            label1.Size = new Size(65, 15);
+            label1.TabIndex = 1;
+            label1.Text = "Nationalité";
+            // 
+            // dgvCompositeur
+            // 
+            dgvCompositeur.AllowUserToAddRows = false;
+            dgvCompositeur.AllowUserToDeleteRows = false;
+            dgvCompositeur.ColumnHeadersHeightSizeMode = DataGridViewColumnHeadersHeightSizeMode.AutoSize;
+            dgvCompositeur.Location = new Point(6, 37);
+            dgvCompositeur.Name = "dgvCompositeur";
+            dgvCompositeur.ReadOnly = true;
+            dgvCompositeur.Size = new Size(782, 384);
+            dgvCompositeur.TabIndex = 2;
+            // 
+            // bsCompositeur
+            // 
+            bsCompositeur.CurrentChanged += bindingSource1_CurrentChanged;
             // 
             // bsNation
             // 
@@ -73,74 +82,77 @@
             // button1
             // 
             button1.BackColor = Color.Red;
-            button1.ForeColor = Color.Cornsilk;
-            button1.Location = new Point(173, 15);
+            button1.ForeColor = SystemColors.ButtonHighlight;
+            button1.Location = new Point(229, 8);
             button1.Name = "button1";
-            button1.Size = new Size(151, 23);
-            button1.TabIndex = 2;
+            button1.Size = new Size(138, 23);
+            button1.TabIndex = 3;
             button1.Text = "Toutes les nationalités";
             button1.UseVisualStyleBackColor = false;
             button1.Click += button1_Click;
             // 
-            // button2
+            // btAjout
             // 
-            button2.Location = new Point(35, 454);
-            button2.Name = "button2";
-            button2.Size = new Size(75, 23);
-            button2.TabIndex = 3;
-            button2.Text = "AJOUT";
-            button2.UseVisualStyleBackColor = true;
-            button2.Click += button2_Click;
+            btAjout.Location = new Point(9, 440);
+            btAjout.Name = "btAjout";
+            btAjout.Size = new Size(75, 23);
+            btAjout.TabIndex = 4;
+            btAjout.Text = "AJOUT";
+            btAjout.UseVisualStyleBackColor = true;
+            btAjout.Click += btAjout_Click;
             // 
-            // button3
+            // btModif
             // 
-            button3.Location = new Point(125, 454);
-            button3.Name = "button3";
-            button3.Size = new Size(98, 23);
-            button3.TabIndex = 4;
-            button3.Text = "MODIFICATION";
-            button3.UseVisualStyleBackColor = true;
-            button3.Click += button3_Click;
+            btModif.Location = new Point(90, 440);
+            btModif.Name = "btModif";
+            btModif.Size = new Size(107, 23);
+            btModif.TabIndex = 5;
+            btModif.Text = "MODIFICATION";
+            btModif.UseVisualStyleBackColor = true;
+            btModif.Click += btModif_Click_1;
             // 
-            // button4
+            // btSupp
             // 
-            button4.Location = new Point(238, 454);
-            button4.Name = "button4";
-            button4.Size = new Size(94, 23);
-            button4.TabIndex = 5;
-            button4.Text = "SUPPRESSION";
-            button4.UseVisualStyleBackColor = true;
-            button4.Click += button4_Click;
+            btSupp.Location = new Point(203, 440);
+            btSupp.Name = "btSupp";
+            btSupp.Size = new Size(85, 23);
+            btSupp.TabIndex = 6;
+            btSupp.Text = "SUPRESSION";
+            btSupp.UseVisualStyleBackColor = true;
+            btSupp.Click += btSupp_Click;
             // 
             // FCompositeurNation
             // 
             AutoScaleDimensions = new SizeF(7F, 15F);
             AutoScaleMode = AutoScaleMode.Font;
-            ClientSize = new Size(800, 498);
-            Controls.Add(button4);
-            Controls.Add(button3);
-            Controls.Add(button2);
+            ClientSize = new Size(800, 489);
+            Controls.Add(btSupp);
+            Controls.Add(btModif);
+            Controls.Add(btAjout);
             Controls.Add(button1);
+            Controls.Add(dgvCompositeur);
+            Controls.Add(label1);
             Controls.Add(cboNation);
-            Controls.Add(dgvCompo);
             Name = "FCompositeurNation";
             Text = "FCompositeurNation";
             Load += FCompositeurNation_Load;
-            ((System.ComponentModel.ISupportInitialize)bsCompo).EndInit();
-            ((System.ComponentModel.ISupportInitialize)dgvCompo).EndInit();
+            ((System.ComponentModel.ISupportInitialize)dgvCompositeur).EndInit();
+            ((System.ComponentModel.ISupportInitialize)bsCompositeur).EndInit();
             ((System.ComponentModel.ISupportInitialize)bsNation).EndInit();
             ResumeLayout(false);
+            PerformLayout();
         }
 
         #endregion
 
-        private BindingSource bsCompo;
-        private DataGridView dgvCompo;
         private ComboBox cboNation;
+        private Label label1;
+        private DataGridView dgvCompositeur;
+        private BindingSource bsCompositeur;
         private BindingSource bsNation;
         private Button button1;
-        private Button button2;
-        private Button button3;
-        private Button button4;
+        private Button btAjout;
+        private Button btModif;
+        private Button btSupp;
     }
 }

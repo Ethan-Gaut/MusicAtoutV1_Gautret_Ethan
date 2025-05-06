@@ -11,17 +11,22 @@ using System.Windows.Forms;
 
 namespace MusicAtoutV1_Gautret_Ethan
 {
-    public partial class FBatiment : Form
+    public partial class FSalles : Form
     {
-        public FBatiment()
+        public FSalles()
         {
             InitializeComponent();
         }
 
-        private void FBatiment_Load(object sender, EventArgs e)
+        private void bindingSource1_CurrentChanged(object sender, EventArgs e)
         {
-            bsBatiment.DataSource = ModelProjet.listeBatiment();
-            dgvBatiment.DataSource = bsBatiment;
+            
+        }
+
+        public void FSalles_Load(object sender, EventArgs e)
+        {
+            bsSalle.DataSource = ModelProjet.listeSalle();
+            dgvSalle.DataSource = bsSalle;
         }
     }
 }

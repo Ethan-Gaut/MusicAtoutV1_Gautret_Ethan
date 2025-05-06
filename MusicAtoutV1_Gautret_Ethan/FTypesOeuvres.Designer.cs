@@ -1,6 +1,6 @@
 ﻿namespace MusicAtoutV1_Gautret_Ethan
 {
-    partial class FBatiment
+    partial class FTypesOeuvres
     {
         /// <summary>
         /// Required designer variable.
@@ -29,40 +29,40 @@
         private void InitializeComponent()
         {
             components = new System.ComponentModel.Container();
-            bsBatiment = new BindingSource(components);
-            dgvBatiment = new DataGridView();
-            ((System.ComponentModel.ISupportInitialize)bsBatiment).BeginInit();
-            ((System.ComponentModel.ISupportInitialize)dgvBatiment).BeginInit();
+            dgvTO = new DataGridView();
+            bsTO = new BindingSource(components);
+            ((System.ComponentModel.ISupportInitialize)dgvTO).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)bsTO).BeginInit();
             SuspendLayout();
             // 
-            // dgvBatiment
+            // dgvTO
             // 
-            dgvBatiment.AllowUserToAddRows = false;
-            dgvBatiment.AllowUserToDeleteRows = false;
-            dgvBatiment.ColumnHeadersHeightSizeMode = DataGridViewColumnHeadersHeightSizeMode.AutoSize;
-            dgvBatiment.Location = new Point(21, 29);
-            dgvBatiment.Name = "dgvBatiment";
-            dgvBatiment.ReadOnly = true;
-            dgvBatiment.Size = new Size(767, 365);
-            dgvBatiment.TabIndex = 0;
+            dgvTO.AllowUserToAddRows = false;
+            dgvTO.AllowUserToDeleteRows = false;
+            dgvTO.ColumnHeadersHeightSizeMode = DataGridViewColumnHeadersHeightSizeMode.AutoSize;
+            dgvTO.Location = new Point(28, 29);
+            dgvTO.Name = "dgvTO";
+            dgvTO.ReadOnly = true;
+            dgvTO.Size = new Size(732, 384);
+            dgvTO.TabIndex = 0;
             // 
-            // FBatiment
+            // FTypesOeuvres
             // 
             AutoScaleDimensions = new SizeF(7F, 15F);
             AutoScaleMode = AutoScaleMode.Font;
             ClientSize = new Size(800, 450);
-            Controls.Add(dgvBatiment);
-            Name = "FBatiment";
-            Text = "FBatiment";
-            Load += FBatiment_Load;
-            ((System.ComponentModel.ISupportInitialize)bsBatiment).EndInit();
-            ((System.ComponentModel.ISupportInitialize)dgvBatiment).EndInit();
+            Controls.Add(dgvTO);
+            Name = "FTypesOeuvres";
+            Text = "FTypesOeuvres";
+            Load += FTypesOeuvres_Load;
+            ((System.ComponentModel.ISupportInitialize)dgvTO).EndInit();
+            ((System.ComponentModel.ISupportInitialize)bsTO).EndInit();
             ResumeLayout(false);
         }
 
         #endregion
 
-        private BindingSource bsBatiment;
-        private DataGridView dgvBatiment;
+        private DataGridView dgvTO;
+        private BindingSource bsTO;
     }
 }

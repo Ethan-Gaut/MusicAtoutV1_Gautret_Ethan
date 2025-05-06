@@ -1,6 +1,6 @@
 ﻿namespace MusicAtoutV1_Gautret_Ethan
 {
-    partial class FSalle
+    partial class FSalles
     {
         /// <summary>
         /// Required designer variable.
@@ -37,33 +37,34 @@
             // 
             // bsSalle
             // 
-            bsSalle.CurrentChanged += bsSalle_CurrentChanged;
+            bsSalle.CurrentChanged += bindingSource1_CurrentChanged;
             // 
             // dgvSalle
             // 
             dgvSalle.AllowUserToAddRows = false;
             dgvSalle.AllowUserToDeleteRows = false;
             dgvSalle.ColumnHeadersHeightSizeMode = DataGridViewColumnHeadersHeightSizeMode.AutoSize;
-            dgvSalle.Location = new Point(4, 12);
+            dgvSalle.Location = new Point(24, 64);
             dgvSalle.Name = "dgvSalle";
             dgvSalle.ReadOnly = true;
-            dgvSalle.Size = new Size(793, 330);
+            dgvSalle.Size = new Size(745, 346);
             dgvSalle.TabIndex = 0;
-            dgvSalle.CellContentClick += dgvSalle_CellContentClick;
             // 
-            // FSalle
+            // FSalles
             // 
             AutoScaleDimensions = new SizeF(7F, 15F);
             AutoScaleMode = AutoScaleMode.Font;
             ClientSize = new Size(800, 450);
             Controls.Add(dgvSalle);
-            Name = "FSalle";
-            Text = "FSalle";
-            Load += FSalle_Load_1;
+            Name = "FSalles";
+            Text = "FSalles";
+            Load += FSalles_Load;
             ((System.ComponentModel.ISupportInitialize)bsSalle).EndInit();
             ((System.ComponentModel.ISupportInitialize)dgvSalle).EndInit();
             ResumeLayout(false);
         }
+
+
 
         #endregion
 
