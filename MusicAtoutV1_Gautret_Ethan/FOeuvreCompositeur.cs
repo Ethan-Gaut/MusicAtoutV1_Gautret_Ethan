@@ -60,7 +60,7 @@ namespace MusicAtoutV1_Gautret_Ethan
             txtMort.Text = leCompositeurChoisi.AnMort.ToString();
             txtRemarque.Text = leCompositeurChoisi.Remarque;
 
-            if(leCompositeurChoisi.Oeuvres.ToList().Count() > 0 )
+            if (leCompositeurChoisi.Oeuvres.ToList().Count() > 0)
             {
                 bsOeuvre.DataSource = leCompositeurChoisi.Oeuvres.ToList();
                 dgvOeuvresCompositeur.DataSource = bsOeuvre;
@@ -82,6 +82,16 @@ namespace MusicAtoutV1_Gautret_Ethan
                 lbOeuvre.Visible = false;
                 dgvOeuvresCompositeur.Visible = false;
             }
+        }
+
+        private void label8_Click(object sender, EventArgs e)
+        {
+
+        }
+
+        private void label5_Click(object sender, EventArgs e)
+        {
+
         }
     }
 }

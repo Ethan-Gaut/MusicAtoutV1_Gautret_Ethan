@@ -34,5 +34,10 @@ namespace MusicAtoutV1_Gautret_Ethan
             bsCompositeur.DataSource = leStyleChoisi.Compositeurs.Select(x => new { x.NomCompositeur, x.PrenomCompositeur, x.IdStyleNavigation.LibStyle, x.AnNais, x.AnMort });
             dgvCompositeur.DataSource = bsCompositeur;
         }
+
+        private void cboStyle_SelectedIndexChanged(object sender, EventArgs e)
+        {
+
+        }
     }
 }

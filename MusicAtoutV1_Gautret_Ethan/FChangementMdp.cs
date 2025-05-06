@@ -36,5 +36,15 @@ namespace MusicAtoutV1_Gautret_Ethan
         {
 
         }
+
+        private void label2_Click(object sender, EventArgs e)
+        {
+
+        }
+
+        private void tbConfirmMdp_TextChanged(object sender, EventArgs e)
+        {
+
+        }
     }
 }

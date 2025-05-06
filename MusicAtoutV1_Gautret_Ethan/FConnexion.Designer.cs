@@ -28,7 +28,6 @@
         /// </summary>
         private void InitializeComponent()
         {
-            System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(FConnexion));
             pictureBox1 = new PictureBox();
             label1 = new Label();
             label2 = new Label();
@@ -40,53 +39,56 @@
             // 
             // pictureBox1
             // 
-            pictureBox1.BackgroundImage = (Image)resources.GetObject("pictureBox1.BackgroundImage");
-            pictureBox1.Location = new Point(3, 12);
+            pictureBox1.Location = new Point(3, 16);
+            pictureBox1.Margin = new Padding(3, 4, 3, 4);
             pictureBox1.Name = "pictureBox1";
-            pictureBox1.Size = new Size(794, 402);
+            pictureBox1.Size = new Size(907, 536);
             pictureBox1.TabIndex = 0;
             pictureBox1.TabStop = false;
             // 
             // label1
             // 
             label1.AutoSize = true;
-            label1.Location = new Point(43, 22);
+            label1.Location = new Point(350, 171);
             label1.Name = "label1";
-            label1.Size = new Size(37, 15);
+            label1.Size = new Size(84, 20);
             label1.TabIndex = 1;
-            label1.Text = "Login";
+            label1.Text = "Identifiant :";
             // 
             // label2
             // 
             label2.AutoSize = true;
-            label2.Location = new Point(23, 53);
+            label2.Location = new Point(350, 227);
             label2.Name = "label2";
-            label2.Size = new Size(57, 15);
+            label2.Size = new Size(105, 20);
             label2.TabIndex = 2;
-            label2.Text = "Password";
+            label2.Text = "Mot de passe :";
             // 
             // tbLogin
             // 
-            tbLogin.Location = new Point(96, 19);
+            tbLogin.Location = new Point(350, 195);
+            tbLogin.Margin = new Padding(3, 4, 3, 4);
             tbLogin.Name = "tbLogin";
-            tbLogin.Size = new Size(100, 23);
+            tbLogin.Size = new Size(189, 27);
             tbLogin.TabIndex = 3;
             // 
             // tbPassword
             // 
-            tbPassword.Location = new Point(96, 48);
+            tbPassword.Location = new Point(350, 251);
+            tbPassword.Margin = new Padding(3, 4, 3, 4);
             tbPassword.Name = "tbPassword";
-            tbPassword.Size = new Size(100, 23);
+            tbPassword.Size = new Size(189, 27);
             tbPassword.TabIndex = 4;
             tbPassword.UseSystemPasswordChar = true;
             // 
             // btConnexion
             // 
-            btConnexion.BackColor = Color.Blue;
+            btConnexion.BackColor = Color.SteelBlue;
             btConnexion.ForeColor = SystemColors.ButtonHighlight;
-            btConnexion.Location = new Point(12, 83);
+            btConnexion.Location = new Point(350, 286);
+            btConnexion.Margin = new Padding(3, 4, 3, 4);
             btConnexion.Name = "btConnexion";
-            btConnexion.Size = new Size(75, 23);
+            btConnexion.Size = new Size(114, 31);
             btConnexion.TabIndex = 5;
             btConnexion.Text = "Connexion";
             btConnexion.UseVisualStyleBackColor = false;
@@ -94,15 +96,16 @@
             // 
             // FConnexion
             // 
-            AutoScaleDimensions = new SizeF(7F, 15F);
+            AutoScaleDimensions = new SizeF(8F, 20F);
             AutoScaleMode = AutoScaleMode.Font;
-            ClientSize = new Size(800, 450);
+            ClientSize = new Size(914, 600);
             Controls.Add(btConnexion);
             Controls.Add(tbPassword);
             Controls.Add(tbLogin);
             Controls.Add(label2);
             Controls.Add(label1);
             Controls.Add(pictureBox1);
+            Margin = new Padding(3, 4, 3, 4);
             Name = "FConnexion";
             Text = "FConnexion";
             Load += FConnexion_Load;

@@ -46,17 +46,18 @@
             // cboNation
             // 
             cboNation.FormattingEnabled = true;
-            cboNation.Location = new Point(86, 8);
+            cboNation.Location = new Point(98, 11);
+            cboNation.Margin = new Padding(3, 4, 3, 4);
             cboNation.Name = "cboNation";
-            cboNation.Size = new Size(121, 23);
+            cboNation.Size = new Size(138, 28);
             cboNation.TabIndex = 0;
             // 
             // label1
             // 
             label1.AutoSize = true;
-            label1.Location = new Point(6, 11);
+            label1.Location = new Point(7, 15);
             label1.Name = "label1";
-            label1.Size = new Size(65, 15);
+            label1.Size = new Size(83, 20);
             label1.TabIndex = 1;
             label1.Text = "Nationalité";
             // 
@@ -65,10 +66,12 @@
             dgvCompositeur.AllowUserToAddRows = false;
             dgvCompositeur.AllowUserToDeleteRows = false;
             dgvCompositeur.ColumnHeadersHeightSizeMode = DataGridViewColumnHeadersHeightSizeMode.AutoSize;
-            dgvCompositeur.Location = new Point(6, 37);
+            dgvCompositeur.Location = new Point(7, 49);
+            dgvCompositeur.Margin = new Padding(3, 4, 3, 4);
             dgvCompositeur.Name = "dgvCompositeur";
             dgvCompositeur.ReadOnly = true;
-            dgvCompositeur.Size = new Size(782, 384);
+            dgvCompositeur.RowHeadersWidth = 51;
+            dgvCompositeur.Size = new Size(894, 512);
             dgvCompositeur.TabIndex = 2;
             // 
             // bsCompositeur
@@ -83,9 +86,10 @@
             // 
             button1.BackColor = Color.Red;
             button1.ForeColor = SystemColors.ButtonHighlight;
-            button1.Location = new Point(229, 8);
+            button1.Location = new Point(262, 11);
+            button1.Margin = new Padding(3, 4, 3, 4);
             button1.Name = "button1";
-            button1.Size = new Size(138, 23);
+            button1.Size = new Size(158, 31);
             button1.TabIndex = 3;
             button1.Text = "Toutes les nationalités";
             button1.UseVisualStyleBackColor = false;
@@ -93,39 +97,45 @@
             // 
             // btAjout
             // 
-            btAjout.Location = new Point(9, 440);
+            btAjout.BackColor = Color.FromArgb(192, 255, 192);
+            btAjout.Location = new Point(10, 587);
+            btAjout.Margin = new Padding(3, 4, 3, 4);
             btAjout.Name = "btAjout";
-            btAjout.Size = new Size(75, 23);
+            btAjout.Size = new Size(86, 31);
             btAjout.TabIndex = 4;
-            btAjout.Text = "AJOUT";
-            btAjout.UseVisualStyleBackColor = true;
+            btAjout.Text = "Ajouter";
+            btAjout.UseVisualStyleBackColor = false;
             btAjout.Click += btAjout_Click;
             // 
             // btModif
             // 
-            btModif.Location = new Point(90, 440);
+            btModif.BackColor = Color.FromArgb(255, 192, 128);
+            btModif.Location = new Point(103, 587);
+            btModif.Margin = new Padding(3, 4, 3, 4);
             btModif.Name = "btModif";
-            btModif.Size = new Size(107, 23);
+            btModif.Size = new Size(122, 31);
             btModif.TabIndex = 5;
-            btModif.Text = "MODIFICATION";
-            btModif.UseVisualStyleBackColor = true;
+            btModif.Text = "Modifier";
+            btModif.UseVisualStyleBackColor = false;
             btModif.Click += btModif_Click_1;
             // 
             // btSupp
             // 
-            btSupp.Location = new Point(203, 440);
+            btSupp.BackColor = Color.Red;
+            btSupp.Location = new Point(232, 587);
+            btSupp.Margin = new Padding(3, 4, 3, 4);
             btSupp.Name = "btSupp";
-            btSupp.Size = new Size(85, 23);
+            btSupp.Size = new Size(97, 31);
             btSupp.TabIndex = 6;
-            btSupp.Text = "SUPRESSION";
-            btSupp.UseVisualStyleBackColor = true;
+            btSupp.Text = "Supprimer";
+            btSupp.UseVisualStyleBackColor = false;
             btSupp.Click += btSupp_Click;
             // 
             // FCompositeurNation
             // 
-            AutoScaleDimensions = new SizeF(7F, 15F);
+            AutoScaleDimensions = new SizeF(8F, 20F);
             AutoScaleMode = AutoScaleMode.Font;
-            ClientSize = new Size(800, 489);
+            ClientSize = new Size(914, 652);
             Controls.Add(btSupp);
             Controls.Add(btModif);
             Controls.Add(btAjout);
@@ -133,6 +143,7 @@
             Controls.Add(dgvCompositeur);
             Controls.Add(label1);
             Controls.Add(cboNation);
+            Margin = new Padding(3, 4, 3, 4);
             Name = "FCompositeurNation";
             Text = "FCompositeurNation";
             Load += FCompositeurNation_Load;

@@ -50,10 +50,12 @@
             // 
             // MenuUser1
             // 
+            MenuUser1.ImageScalingSize = new Size(20, 20);
             MenuUser1.Items.AddRange(new ToolStripItem[] { listesToolStripMenuItem, compositeurToolStripMenuItem, oeuvresToolStripMenuItem, utilisateursToolStripMenuItem });
             MenuUser1.Location = new Point(0, 0);
             MenuUser1.Name = "MenuUser1";
-            MenuUser1.Size = new Size(907, 24);
+            MenuUser1.Padding = new Padding(7, 3, 0, 3);
+            MenuUser1.Size = new Size(1037, 30);
             MenuUser1.TabIndex = 0;
             MenuUser1.Text = "menuStrip1";
             // 
@@ -61,34 +63,34 @@
             // 
             listesToolStripMenuItem.DropDownItems.AddRange(new ToolStripItem[] { villesToolStripMenuItem, sallesToolStripMenuItem, batimentsToolStripMenuItem, typesDoeuvreToolStripMenuItem });
             listesToolStripMenuItem.Name = "listesToolStripMenuItem";
-            listesToolStripMenuItem.Size = new Size(48, 20);
+            listesToolStripMenuItem.Size = new Size(59, 24);
             listesToolStripMenuItem.Text = "Listes";
             // 
             // villesToolStripMenuItem
             // 
             villesToolStripMenuItem.Name = "villesToolStripMenuItem";
-            villesToolStripMenuItem.Size = new Size(152, 22);
+            villesToolStripMenuItem.Size = new Size(190, 26);
             villesToolStripMenuItem.Text = "Villes";
             villesToolStripMenuItem.Click += villesToolStripMenuItem_Click;
             // 
             // sallesToolStripMenuItem
             // 
             sallesToolStripMenuItem.Name = "sallesToolStripMenuItem";
-            sallesToolStripMenuItem.Size = new Size(152, 22);
+            sallesToolStripMenuItem.Size = new Size(190, 26);
             sallesToolStripMenuItem.Text = "Salles";
             sallesToolStripMenuItem.Click += sallesToolStripMenuItem_Click;
             // 
             // batimentsToolStripMenuItem
             // 
             batimentsToolStripMenuItem.Name = "batimentsToolStripMenuItem";
-            batimentsToolStripMenuItem.Size = new Size(152, 22);
+            batimentsToolStripMenuItem.Size = new Size(190, 26);
             batimentsToolStripMenuItem.Text = "Batiments";
             batimentsToolStripMenuItem.Click += batimentsToolStripMenuItem_Click;
             // 
             // typesDoeuvreToolStripMenuItem
             // 
             typesDoeuvreToolStripMenuItem.Name = "typesDoeuvreToolStripMenuItem";
-            typesDoeuvreToolStripMenuItem.Size = new Size(152, 22);
+            typesDoeuvreToolStripMenuItem.Size = new Size(190, 26);
             typesDoeuvreToolStripMenuItem.Text = "Types d'oeuvre";
             typesDoeuvreToolStripMenuItem.Click += typesDoeuvreToolStripMenuItem_Click;
             // 
@@ -96,27 +98,27 @@
             // 
             compositeurToolStripMenuItem.DropDownItems.AddRange(new ToolStripItem[] { parNationalitéToolStripMenuItem, parStyleToolStripMenuItem });
             compositeurToolStripMenuItem.Name = "compositeurToolStripMenuItem";
-            compositeurToolStripMenuItem.Size = new Size(88, 20);
+            compositeurToolStripMenuItem.Size = new Size(108, 24);
             compositeurToolStripMenuItem.Text = "Compositeur";
             // 
             // parNationalitéToolStripMenuItem
             // 
             parNationalitéToolStripMenuItem.Name = "parNationalitéToolStripMenuItem";
-            parNationalitéToolStripMenuItem.Size = new Size(150, 22);
+            parNationalitéToolStripMenuItem.Size = new Size(187, 26);
             parNationalitéToolStripMenuItem.Text = "Par nationalité";
             parNationalitéToolStripMenuItem.Click += parNationalitéToolStripMenuItem_Click;
             // 
             // parStyleToolStripMenuItem
             // 
             parStyleToolStripMenuItem.Name = "parStyleToolStripMenuItem";
-            parStyleToolStripMenuItem.Size = new Size(150, 22);
+            parStyleToolStripMenuItem.Size = new Size(187, 26);
             parStyleToolStripMenuItem.Text = "Par style";
             parStyleToolStripMenuItem.Click += parStyleToolStripMenuItem_Click;
             // 
             // oeuvresToolStripMenuItem
             // 
             oeuvresToolStripMenuItem.Name = "oeuvresToolStripMenuItem";
-            oeuvresToolStripMenuItem.Size = new Size(62, 20);
+            oeuvresToolStripMenuItem.Size = new Size(76, 24);
             oeuvresToolStripMenuItem.Text = "Oeuvres";
             oeuvresToolStripMenuItem.Click += oeuvresToolStripMenuItem_Click;
             // 
@@ -124,20 +126,20 @@
             // 
             utilisateursToolStripMenuItem.DropDownItems.AddRange(new ToolStripItem[] { gestionToolStripMenuItem, changementMdpToolStripMenuItem });
             utilisateursToolStripMenuItem.Name = "utilisateursToolStripMenuItem";
-            utilisateursToolStripMenuItem.Size = new Size(77, 20);
+            utilisateursToolStripMenuItem.Size = new Size(96, 24);
             utilisateursToolStripMenuItem.Text = "Utilisateurs";
             // 
             // gestionToolStripMenuItem
             // 
             gestionToolStripMenuItem.Name = "gestionToolStripMenuItem";
-            gestionToolStripMenuItem.Size = new Size(180, 22);
+            gestionToolStripMenuItem.Size = new Size(211, 26);
             gestionToolStripMenuItem.Text = "Gestion";
             gestionToolStripMenuItem.Click += gestionToolStripMenuItem_Click_1;
             // 
             // changementMdpToolStripMenuItem
             // 
             changementMdpToolStripMenuItem.Name = "changementMdpToolStripMenuItem";
-            changementMdpToolStripMenuItem.Size = new Size(180, 22);
+            changementMdpToolStripMenuItem.Size = new Size(211, 26);
             changementMdpToolStripMenuItem.Text = "Changement mdp";
             changementMdpToolStripMenuItem.Click += changementMdpToolStripMenuItem_Click;
             // 
@@ -145,18 +147,20 @@
             // 
             pictureBox1.Anchor = AnchorStyles.None;
             pictureBox1.Image = (Image)resources.GetObject("pictureBox1.Image");
-            pictureBox1.Location = new Point(54, 66);
+            pictureBox1.Location = new Point(62, 88);
+            pictureBox1.Margin = new Padding(3, 4, 3, 4);
             pictureBox1.Name = "pictureBox1";
-            pictureBox1.Size = new Size(760, 361);
+            pictureBox1.Size = new Size(869, 481);
             pictureBox1.TabIndex = 1;
             pictureBox1.TabStop = false;
             // 
             // btn_deco
             // 
-            btn_deco.BackColor = Color.IndianRed;
-            btn_deco.Location = new Point(26, 462);
+            btn_deco.BackColor = Color.Gray;
+            btn_deco.Location = new Point(920, 34);
+            btn_deco.Margin = new Padding(3, 4, 3, 4);
             btn_deco.Name = "btn_deco";
-            btn_deco.Size = new Size(92, 23);
+            btn_deco.Size = new Size(105, 31);
             btn_deco.TabIndex = 2;
             btn_deco.Text = "Déconnexion";
             btn_deco.UseVisualStyleBackColor = false;
@@ -164,13 +168,14 @@
             // 
             // Fmenu
             // 
-            AutoScaleDimensions = new SizeF(7F, 15F);
+            AutoScaleDimensions = new SizeF(8F, 20F);
             AutoScaleMode = AutoScaleMode.Font;
-            ClientSize = new Size(907, 505);
+            ClientSize = new Size(1037, 673);
             Controls.Add(btn_deco);
             Controls.Add(pictureBox1);
             Controls.Add(MenuUser1);
             MainMenuStrip = MenuUser1;
+            Margin = new Padding(3, 4, 3, 4);
             Name = "Fmenu";
             Text = "FMenu";
             Load += Fmenu_Load;
