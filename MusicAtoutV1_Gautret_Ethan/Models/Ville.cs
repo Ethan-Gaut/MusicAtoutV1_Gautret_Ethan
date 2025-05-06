@@ -5,7 +5,7 @@ namespace MusicAtoutV1_Gautret_Ethan.Models;
 
 public partial class Ville
 {
-    public int IdVille { get; set; }
+    public int IdVille { get; set; } 
 
     public string? NomVille { get; set; }
 

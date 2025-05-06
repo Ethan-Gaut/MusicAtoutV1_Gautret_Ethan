@@ -11,7 +11,7 @@ public partial class Utilisateur
 
     public int? Droits { get; set; }
 
-    public bool Actif { get; set; }
+    public bool? Actif { get; set; }
 
     public int? Nbessais { get; set; }
 }

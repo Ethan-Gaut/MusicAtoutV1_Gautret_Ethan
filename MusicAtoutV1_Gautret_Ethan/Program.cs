@@ -14,7 +14,7 @@ namespace MusicAtoutV1_Gautret_Ethan
             // see https://aka.ms/applicationconfiguration.
             ApplicationConfiguration.Initialize();
             ModelProjet.init();
-            Application.Run(new FMenu());
+            Application.Run(new FConnexion());
         }
     }
 }

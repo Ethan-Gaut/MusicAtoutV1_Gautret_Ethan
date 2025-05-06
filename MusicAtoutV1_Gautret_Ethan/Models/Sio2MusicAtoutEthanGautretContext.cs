@@ -4,13 +4,13 @@ using Microsoft.EntityFrameworkCore;
 
 namespace MusicAtoutV1_Gautret_Ethan.Models;
 
-public partial class Sio2musicAtoutGautretContext : DbContext
+public partial class Sio2MusicAtoutEthanGautretContext : DbContext
 {
-    public Sio2musicAtoutGautretContext()
+    public Sio2MusicAtoutEthanGautretContext()
     {
     }
 
-    public Sio2musicAtoutGautretContext(DbContextOptions<Sio2musicAtoutGautretContext> options)
+    public Sio2MusicAtoutEthanGautretContext(DbContextOptions<Sio2MusicAtoutEthanGautretContext> options)
         : base(options)
     {
     }
@@ -29,11 +29,13 @@ public partial class Sio2musicAtoutGautretContext : DbContext
 
     public virtual DbSet<Typeoeuvre> Typeoeuvres { get; set; }
 
+    public virtual DbSet<Utilisateur> Utilisateurs { get; set; }
+
     public virtual DbSet<Ville> Villes { get; set; }
 
     protected override void OnConfiguring(DbContextOptionsBuilder optionsBuilder)
 #warning To protect potentially sensitive information in your connection string, you should move it out of source code. You can avoid scaffolding the connection string by using the Name= syntax to read it from configuration - see https://go.microsoft.com/fwlink/?linkid=2131148. For more guidance on storing connection strings, see https://go.microsoft.com/fwlink/?LinkId=723263.
-        => optionsBuilder.UseLazyLoadingProxies().UseSqlServer("Data Source=MSI\\MSSQLSERVER01;Initial Catalog=SIO2_MusicAtout_EthanGautret;Integrated Security=True;TrustServerCertificate=True;");
+        => optionsBuilder.UseSqlServer("Data Source=MSI\\MSSQLSERVER01;Initial Catalog=SIO2_MusicAtout_EthanGautret;Integrated Security=True;TrustServerCertificate=True;");
 
     protected override void OnModelCreating(ModelBuilder modelBuilder)
     {
@@ -222,6 +224,25 @@ public partial class Sio2musicAtoutGautretContext : DbContext
                 .HasMaxLength(64)
                 .IsUnicode(false)
                 .HasColumnName("libelleType");
+        });
+
+        modelBuilder.Entity<Utilisateur>(entity =>
+        {
+            entity.HasKey(e => e.IdUtilisateur).HasName("PK__UTILISAT__5366DB19044722E0");
+
+            entity.ToTable("UTILISATEUR");
+
+            entity.Property(e => e.IdUtilisateur)
+                .HasMaxLength(50)
+                .IsUnicode(false)
+                .HasColumnName("idUtilisateur");
+            entity.Property(e => e.Actif).HasColumnName("actif");
+            entity.Property(e => e.Droits).HasColumnName("droits");
+            entity.Property(e => e.Nbessais).HasColumnName("nbessais");
+            entity.Property(e => e.Passwd)
+                .HasMaxLength(100)
+                .IsUnicode(false)
+                .HasColumnName("passwd");
         });
 
         modelBuilder.Entity<Ville>(entity =>
