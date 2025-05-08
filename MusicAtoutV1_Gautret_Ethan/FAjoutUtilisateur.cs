@@ -1,4 +1,4 @@
-﻿using MusicAtoutV1_Gautret_Ethan.Models;
+﻿using MusicAtoutV1_Gautret.Models;
 using System;
 using System.Collections.Generic;
 using System.ComponentModel;
@@ -9,7 +9,7 @@ using System.Text;
 using System.Threading.Tasks;
 using System.Windows.Forms;
 
-namespace MusicAtoutV1_Gautret_Ethan
+namespace MusicAtoutV1_Gautret
 {
     public partial class FAjoutUtilisateur : Form
     {
@@ -34,11 +34,6 @@ namespace MusicAtoutV1_Gautret_Ethan
             {
                 ModelProjet.AjouterUtilisateur(id, droit, mdp);
             }
-        }
-
-        private void FAjoutUtilisateur_Load(object sender, EventArgs e)
-        {
-
         }
     }
 }

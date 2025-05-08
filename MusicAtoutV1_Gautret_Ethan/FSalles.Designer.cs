@@ -1,4 +1,4 @@
-﻿namespace MusicAtoutV1_Gautret_Ethan
+﻿namespace MusicAtoutV1_Gautret
 {
     partial class FSalles
     {
@@ -31,6 +31,7 @@
             components = new System.ComponentModel.Container();
             bsSalle = new BindingSource(components);
             dgvSalle = new DataGridView();
+            label1 = new Label();
             ((System.ComponentModel.ISupportInitialize)bsSalle).BeginInit();
             ((System.ComponentModel.ISupportInitialize)dgvSalle).BeginInit();
             SuspendLayout();
@@ -44,24 +45,38 @@
             dgvSalle.AllowUserToAddRows = false;
             dgvSalle.AllowUserToDeleteRows = false;
             dgvSalle.ColumnHeadersHeightSizeMode = DataGridViewColumnHeadersHeightSizeMode.AutoSize;
-            dgvSalle.Location = new Point(24, 64);
+            dgvSalle.Location = new Point(27, 85);
+            dgvSalle.Margin = new Padding(3, 4, 3, 4);
             dgvSalle.Name = "dgvSalle";
             dgvSalle.ReadOnly = true;
-            dgvSalle.Size = new Size(745, 346);
+            dgvSalle.RowHeadersWidth = 51;
+            dgvSalle.Size = new Size(851, 461);
             dgvSalle.TabIndex = 0;
+            // 
+            // label1
+            // 
+            label1.AutoSize = true;
+            label1.Location = new Point(34, 43);
+            label1.Name = "label1";
+            label1.Size = new Size(106, 20);
+            label1.TabIndex = 1;
+            label1.Text = "Liste des salles";
             // 
             // FSalles
             // 
-            AutoScaleDimensions = new SizeF(7F, 15F);
+            AutoScaleDimensions = new SizeF(8F, 20F);
             AutoScaleMode = AutoScaleMode.Font;
-            ClientSize = new Size(800, 450);
+            ClientSize = new Size(914, 600);
+            Controls.Add(label1);
             Controls.Add(dgvSalle);
+            Margin = new Padding(3, 4, 3, 4);
             Name = "FSalles";
             Text = "FSalles";
             Load += FSalles_Load;
             ((System.ComponentModel.ISupportInitialize)bsSalle).EndInit();
             ((System.ComponentModel.ISupportInitialize)dgvSalle).EndInit();
             ResumeLayout(false);
+            PerformLayout();
         }
 
 
@@ -70,5 +85,6 @@
 
         private BindingSource bsSalle;
         private DataGridView dgvSalle;
+        private Label label1;
     }
 }

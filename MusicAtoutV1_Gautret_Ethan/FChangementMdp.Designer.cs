@@ -1,5 +1,4 @@
-﻿
-namespace MusicAtoutV1_Gautret_Ethan
+﻿namespace MusicAtoutV1_Gautret
 {
     partial class FChangementMdp
     {
@@ -41,64 +40,58 @@ namespace MusicAtoutV1_Gautret_Ethan
             // 
             // tbAncienMdp
             // 
-            tbAncienMdp.Location = new Point(61, 115);
+            tbAncienMdp.Location = new Point(345, 113);
             tbAncienMdp.Margin = new Padding(3, 4, 3, 4);
             tbAncienMdp.Name = "tbAncienMdp";
-            tbAncienMdp.Size = new Size(225, 27);
+            tbAncienMdp.Size = new Size(147, 27);
             tbAncienMdp.TabIndex = 0;
-            tbAncienMdp.TextChanged += this.tbAncienMdp_TextChanged;
             // 
             // tbNouveauMdp
             // 
-            tbNouveauMdp.Location = new Point(61, 193);
+            tbNouveauMdp.Location = new Point(345, 191);
             tbNouveauMdp.Margin = new Padding(3, 4, 3, 4);
             tbNouveauMdp.Name = "tbNouveauMdp";
-            tbNouveauMdp.Size = new Size(225, 27);
+            tbNouveauMdp.Size = new Size(147, 27);
             tbNouveauMdp.TabIndex = 1;
-            tbNouveauMdp.TextChanged += this.tbNouveauMdp_TextChanged;
             // 
             // tbConfirmMdp
             // 
-            tbConfirmMdp.Location = new Point(61, 261);
+            tbConfirmMdp.Location = new Point(345, 259);
             tbConfirmMdp.Margin = new Padding(3, 4, 3, 4);
             tbConfirmMdp.Name = "tbConfirmMdp";
-            tbConfirmMdp.Size = new Size(225, 27);
+            tbConfirmMdp.Size = new Size(147, 27);
             tbConfirmMdp.TabIndex = 2;
-            tbConfirmMdp.TextChanged += tbConfirmMdp_TextChanged;
             // 
             // label1
             // 
             label1.AutoSize = true;
-            label1.Location = new Point(61, 91);
+            label1.Location = new Point(178, 117);
             label1.Name = "label1";
-            label1.Size = new Size(154, 20);
+            label1.Size = new Size(147, 20);
             label1.TabIndex = 3;
-            label1.Text = "Ancien mot de passe :";
-            label1.Click += this.label1_Click;
+            label1.Text = "Ancien Mot de passe";
             // 
             // label2
             // 
             label2.AutoSize = true;
-            label2.Location = new Point(61, 169);
+            label2.Location = new Point(178, 191);
             label2.Name = "label2";
-            label2.Size = new Size(168, 20);
+            label2.Size = new Size(159, 20);
             label2.TabIndex = 4;
-            label2.Text = "Nouveau mot de passe :";
-            label2.Click += label2_Click;
+            label2.Text = "Nouveau Mot de Passe";
             // 
             // label3
             // 
             label3.AutoSize = true;
-            label3.Location = new Point(61, 237);
+            label3.Location = new Point(178, 263);
             label3.Name = "label3";
-            label3.Size = new Size(213, 20);
+            label3.Size = new Size(166, 20);
             label3.TabIndex = 5;
-            label3.Text = "Confirmer votre mot de passe :";
-            label3.Click += this.label3_Click;
+            label3.Text = "Confirmer Mot de Passe";
             // 
             // btn_valid
             // 
-            btn_valid.Location = new Point(61, 296);
+            btn_valid.Location = new Point(366, 320);
             btn_valid.Margin = new Padding(3, 4, 3, 4);
             btn_valid.Name = "btn_valid";
             btn_valid.Size = new Size(86, 31);
@@ -110,17 +103,17 @@ namespace MusicAtoutV1_Gautret_Ethan
             // label4
             // 
             label4.AutoSize = true;
-            label4.Location = new Point(2, 9);
+            label4.Location = new Point(345, 43);
             label4.Name = "label4";
-            label4.Size = new Size(252, 20);
+            label4.Size = new Size(150, 20);
             label4.TabIndex = 7;
-            label4.Text = "Changement de votre mot de passe: ";
+            label4.Text = "Changement de MDP";
             // 
             // FChangementMdp
             // 
             AutoScaleDimensions = new SizeF(8F, 20F);
             AutoScaleMode = AutoScaleMode.Font;
-            ClientSize = new Size(336, 600);
+            ClientSize = new Size(914, 600);
             Controls.Add(label4);
             Controls.Add(btn_valid);
             Controls.Add(label3);
@@ -147,9 +140,5 @@ namespace MusicAtoutV1_Gautret_Ethan
         private Label label3;
         private Button btn_valid;
         private Label label4;
-        private EventHandler tbAncienMdp_TextChanged;
-        private EventHandler tbNouveauMdp_TextChanged;
-        private EventHandler label1_Click;
-        private EventHandler label3_Click;
     }
 }

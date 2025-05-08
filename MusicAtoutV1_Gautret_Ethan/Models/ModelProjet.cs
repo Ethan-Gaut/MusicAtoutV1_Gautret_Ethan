@@ -6,27 +6,26 @@ using System.Runtime.CompilerServices;
 using System.Text;
 using System.Threading.Tasks;
 using System.Security.Cryptography;
-using MusicAtoutV1_Gautret_Ethan.Models;
 
-namespace MusicAtoutV1_Gautret_Ethan.Models
+namespace MusicAtoutV1_Gautret.Models
 {
     public static class ModelProjet
     {
-        private static Sio2MusicAtoutEthanGautretContext monModel;
+        private static Sio2musicAtoutGautretContext monModel;
         private static int actionGestionCompositeur;
         private static Compositeur compositeurChoisi;
         private static Utilisateur utilisateurConnecte;
         private static bool connexionValide;
 
+        public static Sio2musicAtoutGautretContext MonModel { get => monModel; set => monModel = value; }
         public static int ActionGestionCompositeur { get => actionGestionCompositeur; set => actionGestionCompositeur = value; }
         public static Compositeur CompositeurChoisi { get => compositeurChoisi; set => compositeurChoisi = value; }
         public static bool ConnexionValide { get => connexionValide; set => connexionValide = value; }
-        public static Sio2MusicAtoutEthanGautretContext MonModel { get => monModel; set => monModel = value; }
         public static Utilisateur UtilisateurConnecte { get => utilisateurConnecte; set => utilisateurConnecte = value; }
 
         public static void init()
         {
-            monModel = new Sio2MusicAtoutEthanGautretContext();
+            monModel = new Sio2musicAtoutGautretContext();
         }
         public static List<Ville> listeVille()
         {
@@ -152,17 +151,17 @@ namespace MusicAtoutV1_Gautret_Ethan.Models
             return sb.ToString();
         }
 
-
+        
         public static bool validConnexion(string id, string mp)
         {
             string message = "";
             // Ecrire le code qui renvoie le message à afficher et mets à jour les variables utilisateurConnecte et connexionValide,
             // la comparaison des mots de passes se fera via utilisateurConnecte.passwd.Substring(2).Equals(GetMd5Hash(mp))
-            if (monModel.Utilisateurs.Where(x => x.IdUtilisateur == id).ToList().Count == 1)
+            if(monModel.Utilisateurs.Where(x => x.IdUtilisateur == id).ToList().Count == 1)
             {
                 utilisateurConnecte = monModel.Utilisateurs.Where(x => x.IdUtilisateur == id).ToList()[0];
 
-                if (utilisateurConnecte.Nbessais == 4)
+                if (utilisateurConnecte.Nbessais == 4) 
                 {
                     if (utilisateurConnecte.Passwd.Substring(2).Equals(GetMd5Hash(mp)))
                     {
@@ -174,7 +173,7 @@ namespace MusicAtoutV1_Gautret_Ethan.Models
                     }
                 }
 
-                if (utilisateurConnecte.Actif == true && utilisateurConnecte.Nbessais < 3)
+                if(utilisateurConnecte.Actif && utilisateurConnecte.Nbessais < 3)
                 {
                     if (utilisateurConnecte.Passwd.Substring(2).Equals(GetMd5Hash(mp)))
                     {
@@ -197,7 +196,7 @@ namespace MusicAtoutV1_Gautret_Ethan.Models
                 {
                     connexionValide = false;
                     message += "Compte Désactivé...";
-                    if (utilisateurConnecte.Nbessais == 3 && utilisateurConnecte.Actif == true)
+                    if(utilisateurConnecte.Nbessais == 3 && utilisateurConnecte.Actif)
                     {
                         utilisateurConnecte.Actif = false;
                     }
@@ -208,7 +207,7 @@ namespace MusicAtoutV1_Gautret_Ethan.Models
                 message += "Nom d'utilisateur ou mot de passe incorrect\n";
             }
 
-            if (message != "")
+            if(message != "")
             {
                 MessageBox.Show(message);
             }
@@ -227,7 +226,7 @@ namespace MusicAtoutV1_Gautret_Ethan.Models
             {
                 message = "Les mots de passe ne correspondent pas.";
             }
-            else if (!utilisateurConnecte.Passwd.Substring(2).Equals("0x" + hashAncien)) // Vérifie si l'ancien mot de passe est correct
+            else if (!utilisateurConnecte.Passwd.Substring(2).Equals("0x"+ hashAncien)) // Vérifie si l'ancien mot de passe est correct
             {
                 message = "Ancien mot de passe incorrect.";
             }
@@ -239,7 +238,7 @@ namespace MusicAtoutV1_Gautret_Ethan.Models
             {
                 utilisateurConnecte.Passwd = hashNouveau;
 
-                using (var db = new Sio2MusicAtoutEthanGautretContext())
+                using (var db = new Sio2musicAtoutGautretContext())
                 {
                     var user = db.Utilisateurs.FirstOrDefault(u => u.IdUtilisateur == utilisateurConnecte.IdUtilisateur);
                     if (user != null)

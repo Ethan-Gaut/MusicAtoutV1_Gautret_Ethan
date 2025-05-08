@@ -1,4 +1,4 @@
-﻿using MusicAtoutV1_Gautret_Ethan.Models;
+﻿using MusicAtoutV1_Gautret.Models;
 using System;
 using System.Collections.Generic;
 using System.ComponentModel;
@@ -9,7 +9,7 @@ using System.Text;
 using System.Threading.Tasks;
 using System.Windows.Forms;
 
-namespace MusicAtoutV1_Gautret_Ethan
+namespace MusicAtoutV1_Gautret
 {
     public partial class FCompositeurStyle : Form
     {
@@ -35,7 +35,7 @@ namespace MusicAtoutV1_Gautret_Ethan
             dgvCompositeur.DataSource = bsCompositeur;
         }
 
-        private void cboStyle_SelectedIndexChanged(object sender, EventArgs e)
+        private void txtFin_TextChanged(object sender, EventArgs e)
         {
 
         }

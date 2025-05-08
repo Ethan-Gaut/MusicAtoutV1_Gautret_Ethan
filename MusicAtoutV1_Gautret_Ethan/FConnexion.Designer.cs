@@ -1,4 +1,4 @@
-﻿namespace MusicAtoutV1_Gautret_Ethan
+﻿namespace MusicAtoutV1_Gautret
 {
     partial class FConnexion
     {
@@ -34,6 +34,7 @@
             tbLogin = new TextBox();
             tbPassword = new TextBox();
             btConnexion = new Button();
+            label3 = new Label();
             ((System.ComponentModel.ISupportInitialize)pictureBox1).BeginInit();
             SuspendLayout();
             // 
@@ -49,7 +50,7 @@
             // label1
             // 
             label1.AutoSize = true;
-            label1.Location = new Point(350, 171);
+            label1.Location = new Point(88, 100);
             label1.Name = "label1";
             label1.Size = new Size(84, 20);
             label1.TabIndex = 1;
@@ -58,7 +59,7 @@
             // label2
             // 
             label2.AutoSize = true;
-            label2.Location = new Point(350, 227);
+            label2.Location = new Point(88, 168);
             label2.Name = "label2";
             label2.Size = new Size(105, 20);
             label2.TabIndex = 2;
@@ -66,39 +67,49 @@
             // 
             // tbLogin
             // 
-            tbLogin.Location = new Point(350, 195);
+            tbLogin.Location = new Point(88, 124);
             tbLogin.Margin = new Padding(3, 4, 3, 4);
             tbLogin.Name = "tbLogin";
-            tbLogin.Size = new Size(189, 27);
+            tbLogin.Size = new Size(178, 27);
             tbLogin.TabIndex = 3;
             // 
             // tbPassword
             // 
-            tbPassword.Location = new Point(350, 251);
+            tbPassword.Location = new Point(88, 192);
             tbPassword.Margin = new Padding(3, 4, 3, 4);
             tbPassword.Name = "tbPassword";
-            tbPassword.Size = new Size(189, 27);
+            tbPassword.Size = new Size(178, 27);
             tbPassword.TabIndex = 4;
             tbPassword.UseSystemPasswordChar = true;
             // 
             // btConnexion
             // 
-            btConnexion.BackColor = Color.SteelBlue;
+            btConnexion.BackColor = Color.FromArgb(128, 255, 128);
             btConnexion.ForeColor = SystemColors.ButtonHighlight;
-            btConnexion.Location = new Point(350, 286);
+            btConnexion.Location = new Point(88, 239);
             btConnexion.Margin = new Padding(3, 4, 3, 4);
             btConnexion.Name = "btConnexion";
-            btConnexion.Size = new Size(114, 31);
+            btConnexion.Size = new Size(125, 31);
             btConnexion.TabIndex = 5;
             btConnexion.Text = "Connexion";
             btConnexion.UseVisualStyleBackColor = false;
             btConnexion.Click += btConnexion_Click;
             // 
+            // label3
+            // 
+            label3.AutoSize = true;
+            label3.Location = new Point(12, 25);
+            label3.Name = "label3";
+            label3.Size = new Size(134, 20);
+            label3.TabIndex = 6;
+            label3.Text = "Page de connexion";
+            // 
             // FConnexion
             // 
             AutoScaleDimensions = new SizeF(8F, 20F);
             AutoScaleMode = AutoScaleMode.Font;
-            ClientSize = new Size(914, 600);
+            ClientSize = new Size(347, 359);
+            Controls.Add(label3);
             Controls.Add(btConnexion);
             Controls.Add(tbPassword);
             Controls.Add(tbLogin);
@@ -122,5 +133,6 @@
         private TextBox tbLogin;
         private TextBox tbPassword;
         private Button btConnexion;
+        private Label label3;
     }
 }

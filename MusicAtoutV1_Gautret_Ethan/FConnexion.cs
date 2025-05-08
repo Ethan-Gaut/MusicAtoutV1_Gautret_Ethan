@@ -1,4 +1,4 @@
-﻿using MusicAtoutV1_Gautret_Ethan.Models;
+﻿using MusicAtoutV1_Gautret.Models;
 using System;
 using System.Collections.Generic;
 using System.ComponentModel;
@@ -11,7 +11,7 @@ using System.Threading.Tasks;
 using System.Windows.Forms;
 using static System.Windows.Forms.VisualStyles.VisualStyleElement;
 
-namespace MusicAtoutV1_Gautret_Ethan
+namespace MusicAtoutV1_Gautret
 {
     public partial class FConnexion : Form
     {

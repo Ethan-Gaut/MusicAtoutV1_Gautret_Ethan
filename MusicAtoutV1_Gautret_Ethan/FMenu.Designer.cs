@@ -1,4 +1,4 @@
-﻿namespace MusicAtoutV1_Gautret_Ethan
+﻿namespace MusicAtoutV1_Gautret
 {
     partial class Fmenu
     {
@@ -147,16 +147,16 @@
             // 
             pictureBox1.Anchor = AnchorStyles.None;
             pictureBox1.Image = (Image)resources.GetObject("pictureBox1.Image");
-            pictureBox1.Location = new Point(62, 88);
+            pictureBox1.Location = new Point(45, 41);
             pictureBox1.Margin = new Padding(3, 4, 3, 4);
             pictureBox1.Name = "pictureBox1";
-            pictureBox1.Size = new Size(869, 481);
+            pictureBox1.Size = new Size(869, 362);
             pictureBox1.TabIndex = 1;
             pictureBox1.TabStop = false;
             // 
             // btn_deco
             // 
-            btn_deco.BackColor = Color.Gray;
+            btn_deco.BackColor = Color.Silver;
             btn_deco.Location = new Point(920, 34);
             btn_deco.Margin = new Padding(3, 4, 3, 4);
             btn_deco.Name = "btn_deco";
@@ -170,7 +170,7 @@
             // 
             AutoScaleDimensions = new SizeF(8F, 20F);
             AutoScaleMode = AutoScaleMode.Font;
-            ClientSize = new Size(1037, 673);
+            ClientSize = new Size(1037, 409);
             Controls.Add(btn_deco);
             Controls.Add(pictureBox1);
             Controls.Add(MenuUser1);

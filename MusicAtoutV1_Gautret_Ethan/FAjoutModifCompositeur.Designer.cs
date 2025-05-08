@@ -1,4 +1,4 @@
-﻿namespace MusicAtoutV1_Gautret_Ethan
+﻿namespace MusicAtoutV1_Gautret
 {
     partial class FAjoutModifCompositeur
     {

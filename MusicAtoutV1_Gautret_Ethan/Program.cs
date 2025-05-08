@@ -1,6 +1,6 @@
-using MusicAtoutV1_Gautret_Ethan.Models;
+using MusicAtoutV1_Gautret.Models;
 
-namespace MusicAtoutV1_Gautret_Ethan
+namespace MusicAtoutV1_Gautret
 {
     internal static class Program
     {

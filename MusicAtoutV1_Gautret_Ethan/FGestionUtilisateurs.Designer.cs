@@ -1,4 +1,4 @@
-﻿namespace MusicAtoutV1_Gautret_Ethan.Models
+﻿namespace MusicAtoutV1_Gautret.Models
 {
     partial class FGestionUtilisateurs
     {
@@ -44,9 +44,9 @@
             label1.AutoSize = true;
             label1.Location = new Point(14, 25);
             label1.Name = "label1";
-            label1.Size = new Size(168, 20);
+            label1.Size = new Size(222, 20);
             label1.TabIndex = 0;
-            label1.Text = "Gestion des utilisateurs :";
+            label1.Text = "Menu de gestion des utilisateurs";
             // 
             // dgvUtilisateurs
             // 
@@ -58,7 +58,7 @@
             dgvUtilisateurs.Name = "dgvUtilisateurs";
             dgvUtilisateurs.ReadOnly = true;
             dgvUtilisateurs.RowHeadersWidth = 51;
-            dgvUtilisateurs.Size = new Size(568, 645);
+            dgvUtilisateurs.Size = new Size(473, 645);
             dgvUtilisateurs.TabIndex = 1;
             dgvUtilisateurs.CellContentClick += dgvUtilisateurs_CellContentClick;
             // 
@@ -68,42 +68,45 @@
             // 
             // btnReactivation
             // 
-            btnReactivation.Location = new Point(369, 702);
+            btnReactivation.BackColor = SystemColors.ActiveCaption;
+            btnReactivation.Location = new Point(303, 702);
             btnReactivation.Margin = new Padding(3, 4, 3, 4);
             btnReactivation.Name = "btnReactivation";
             btnReactivation.Size = new Size(86, 31);
             btnReactivation.TabIndex = 3;
             btnReactivation.Text = "Activer";
-            btnReactivation.UseVisualStyleBackColor = true;
+            btnReactivation.UseVisualStyleBackColor = false;
             btnReactivation.Click += btnReactivation_Click;
             // 
             // btnDesactivation
             // 
-            btnDesactivation.Location = new Point(480, 702);
+            btnDesactivation.BackColor = Color.FromArgb(255, 128, 128);
+            btnDesactivation.Location = new Point(395, 702);
             btnDesactivation.Margin = new Padding(3, 4, 3, 4);
             btnDesactivation.Name = "btnDesactivation";
             btnDesactivation.Size = new Size(86, 31);
             btnDesactivation.TabIndex = 4;
             btnDesactivation.Text = "Désactiver";
-            btnDesactivation.UseVisualStyleBackColor = true;
+            btnDesactivation.UseVisualStyleBackColor = false;
             btnDesactivation.Click += btnDesactivation_Click;
             // 
             // btnAjout
             // 
+            btnAjout.BackColor = Color.FromArgb(128, 255, 128);
             btnAjout.Location = new Point(14, 702);
             btnAjout.Margin = new Padding(3, 4, 3, 4);
             btnAjout.Name = "btnAjout";
             btnAjout.Size = new Size(86, 31);
             btnAjout.TabIndex = 5;
             btnAjout.Text = "Ajouter";
-            btnAjout.UseVisualStyleBackColor = true;
+            btnAjout.UseVisualStyleBackColor = false;
             btnAjout.Click += btnAjout_Click;
             // 
             // FGestionUtilisateurs
             // 
             AutoScaleDimensions = new SizeF(8F, 20F);
             AutoScaleMode = AutoScaleMode.Font;
-            ClientSize = new Size(584, 769);
+            ClientSize = new Size(500, 755);
             Controls.Add(btnAjout);
             Controls.Add(btnDesactivation);
             Controls.Add(btnReactivation);

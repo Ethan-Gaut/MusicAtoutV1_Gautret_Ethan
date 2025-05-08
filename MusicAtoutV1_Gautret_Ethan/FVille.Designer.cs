@@ -1,4 +1,4 @@
-﻿namespace MusicAtoutV1_Gautret_Ethan.Models
+﻿namespace MusicAtoutV1_Gautret.Models
 {
     partial class FVille
     {
@@ -31,6 +31,7 @@
             components = new System.ComponentModel.Container();
             bsVille = new BindingSource(components);
             dgvVille = new DataGridView();
+            label1 = new Label();
             ((System.ComponentModel.ISupportInitialize)bsVille).BeginInit();
             ((System.ComponentModel.ISupportInitialize)dgvVille).BeginInit();
             SuspendLayout();
@@ -44,30 +45,44 @@
             dgvVille.AllowUserToAddRows = false;
             dgvVille.AllowUserToDeleteRows = false;
             dgvVille.ColumnHeadersHeightSizeMode = DataGridViewColumnHeadersHeightSizeMode.AutoSize;
-            dgvVille.Location = new Point(25, 12);
+            dgvVille.Location = new Point(25, 32);
+            dgvVille.Margin = new Padding(3, 4, 3, 4);
             dgvVille.Name = "dgvVille";
             dgvVille.ReadOnly = true;
-            dgvVille.Size = new Size(751, 416);
+            dgvVille.RowHeadersWidth = 51;
+            dgvVille.Size = new Size(858, 555);
             dgvVille.TabIndex = 0;
-                //dgvVille.CellContentClick += this.dgvVille_CellContentClick;
+            // 
+            // label1
+            // 
+            label1.AutoSize = true;
+            label1.Location = new Point(39, 4);
+            label1.Name = "label1";
+            label1.Size = new Size(103, 20);
+            label1.TabIndex = 1;
+            label1.Text = "Liste des villes";
             // 
             // FVille
             // 
-            AutoScaleDimensions = new SizeF(7F, 15F);
+            AutoScaleDimensions = new SizeF(8F, 20F);
             AutoScaleMode = AutoScaleMode.Font;
-            ClientSize = new Size(800, 450);
+            ClientSize = new Size(914, 600);
+            Controls.Add(label1);
             Controls.Add(dgvVille);
+            Margin = new Padding(3, 4, 3, 4);
             Name = "FVille";
             Text = "FVille";
             Load += FVille_Load;
             ((System.ComponentModel.ISupportInitialize)bsVille).EndInit();
             ((System.ComponentModel.ISupportInitialize)dgvVille).EndInit();
             ResumeLayout(false);
+            PerformLayout();
         }
 
         #endregion
 
         private BindingSource bsVille;
         private DataGridView dgvVille;
+        private Label label1;
     }
 }

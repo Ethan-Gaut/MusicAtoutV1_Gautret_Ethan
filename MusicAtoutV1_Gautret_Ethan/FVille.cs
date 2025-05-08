@@ -8,7 +8,7 @@ using System.Text;
 using System.Threading.Tasks;
 using System.Windows.Forms;
 
-namespace MusicAtoutV1_Gautret_Ethan.Models
+namespace MusicAtoutV1_Gautret.Models
 {
     public partial class FVille : Form
     {

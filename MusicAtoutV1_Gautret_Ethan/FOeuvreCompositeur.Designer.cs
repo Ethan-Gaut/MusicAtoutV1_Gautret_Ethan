@@ -1,5 +1,4 @@
-﻿
-namespace MusicAtoutV1_Gautret_Ethan
+﻿namespace MusicAtoutV1_Gautret
 {
     partial class FOeuvreCompositeur
     {
@@ -66,7 +65,7 @@ namespace MusicAtoutV1_Gautret_Ethan
             // label1
             // 
             label1.AutoSize = true;
-            label1.Location = new Point(49, 292);
+            label1.Location = new Point(48, 6);
             label1.Name = "label1";
             label1.Size = new Size(41, 20);
             label1.TabIndex = 0;
@@ -76,7 +75,7 @@ namespace MusicAtoutV1_Gautret_Ethan
             // cboStyle
             // 
             cboStyle.FormattingEnabled = true;
-            cboStyle.Location = new Point(49, 316);
+            cboStyle.Location = new Point(48, 30);
             cboStyle.Margin = new Padding(3, 4, 3, 4);
             cboStyle.Name = "cboStyle";
             cboStyle.Size = new Size(238, 28);
@@ -85,7 +84,7 @@ namespace MusicAtoutV1_Gautret_Ethan
             // label2
             // 
             label2.AutoSize = true;
-            label2.Location = new Point(49, 351);
+            label2.Location = new Point(48, 65);
             label2.Name = "label2";
             label2.Size = new Size(50, 20);
             label2.TabIndex = 2;
@@ -95,7 +94,7 @@ namespace MusicAtoutV1_Gautret_Ethan
             // 
             label3.AutoSize = true;
             label3.ImageAlign = ContentAlignment.TopLeft;
-            label3.Location = new Point(126, 351);
+            label3.Location = new Point(125, 65);
             label3.Name = "label3";
             label3.Size = new Size(28, 20);
             label3.TabIndex = 3;
@@ -104,7 +103,7 @@ namespace MusicAtoutV1_Gautret_Ethan
             // 
             // txtDebut
             // 
-            txtDebut.Location = new Point(49, 375);
+            txtDebut.Location = new Point(48, 89);
             txtDebut.Margin = new Padding(3, 4, 3, 4);
             txtDebut.Name = "txtDebut";
             txtDebut.Size = new Size(69, 27);
@@ -112,7 +111,7 @@ namespace MusicAtoutV1_Gautret_Ethan
             // 
             // txtFin
             // 
-            txtFin.Location = new Point(126, 375);
+            txtFin.Location = new Point(125, 89);
             txtFin.Margin = new Padding(3, 4, 3, 4);
             txtFin.Name = "txtFin";
             txtFin.Size = new Size(79, 27);
@@ -120,29 +119,29 @@ namespace MusicAtoutV1_Gautret_Ethan
             // 
             // pictureBox1
             // 
-            pictureBox1.BackColor = Color.FromArgb(224, 224, 224);
-            pictureBox1.Location = new Point(418, 49);
+            pictureBox1.BackColor = Color.Silver;
+            pictureBox1.Location = new Point(417, 13);
             pictureBox1.Margin = new Padding(3, 4, 3, 4);
             pictureBox1.Name = "pictureBox1";
-            pictureBox1.Size = new Size(630, 769);
+            pictureBox1.Size = new Size(630, 705);
             pictureBox1.TabIndex = 6;
             pictureBox1.TabStop = false;
             // 
             // label4
             // 
             label4.AutoSize = true;
-            label4.Location = new Point(49, 409);
+            label4.Location = new Point(48, 123);
             label4.Name = "label4";
-            label4.Size = new Size(174, 20);
+            label4.Size = new Size(211, 20);
             label4.TabIndex = 7;
-            label4.Text = "Compositeurs de ce style";
+            label4.Text = "liste des compositeurs du style";
             // 
             // dgvCompositeurStyle
             // 
             dgvCompositeurStyle.AllowUserToAddRows = false;
             dgvCompositeurStyle.AllowUserToDeleteRows = false;
             dgvCompositeurStyle.ColumnHeadersHeightSizeMode = DataGridViewColumnHeadersHeightSizeMode.AutoSize;
-            dgvCompositeurStyle.Location = new Point(45, 433);
+            dgvCompositeurStyle.Location = new Point(44, 147);
             dgvCompositeurStyle.Margin = new Padding(3, 4, 3, 4);
             dgvCompositeurStyle.Name = "dgvCompositeurStyle";
             dgvCompositeurStyle.ReadOnly = true;
@@ -154,18 +153,17 @@ namespace MusicAtoutV1_Gautret_Ethan
             // 
             label5.AutoSize = true;
             label5.BackColor = Color.Transparent;
-            label5.Location = new Point(450, 138);
+            label5.Location = new Point(435, 34);
             label5.Name = "label5";
             label5.Size = new Size(155, 20);
             label5.TabIndex = 9;
             label5.Text = "Vous avez Selectionné";
-            label5.Click += label5_Click;
             // 
             // label6
             // 
             label6.AutoSize = true;
             label6.BackColor = Color.Transparent;
-            label6.Location = new Point(465, 180);
+            label6.Location = new Point(507, 72);
             label6.Name = "label6";
             label6.Size = new Size(83, 20);
             label6.TabIndex = 10;
@@ -175,7 +173,7 @@ namespace MusicAtoutV1_Gautret_Ethan
             // 
             label7.AutoSize = true;
             label7.BackColor = Color.Transparent;
-            label7.Location = new Point(822, 180);
+            label7.Location = new Point(817, 72);
             label7.Name = "label7";
             label7.Size = new Size(41, 20);
             label7.TabIndex = 11;
@@ -183,7 +181,7 @@ namespace MusicAtoutV1_Gautret_Ethan
             // 
             // txtCompositeur
             // 
-            txtCompositeur.Location = new Point(611, 131);
+            txtCompositeur.Location = new Point(610, 31);
             txtCompositeur.Margin = new Padding(3, 4, 3, 4);
             txtCompositeur.Name = "txtCompositeur";
             txtCompositeur.Size = new Size(386, 27);
@@ -191,7 +189,7 @@ namespace MusicAtoutV1_Gautret_Ethan
             // 
             // txtNationalite
             // 
-            txtNationalite.Location = new Point(611, 169);
+            txtNationalite.Location = new Point(610, 69);
             txtNationalite.Margin = new Padding(3, 4, 3, 4);
             txtNationalite.Name = "txtNationalite";
             txtNationalite.Size = new Size(190, 27);
@@ -199,7 +197,7 @@ namespace MusicAtoutV1_Gautret_Ethan
             // 
             // txtStyle
             // 
-            txtStyle.Location = new Point(865, 169);
+            txtStyle.Location = new Point(864, 69);
             txtStyle.Margin = new Padding(3, 4, 3, 4);
             txtStyle.Name = "txtStyle";
             txtStyle.Size = new Size(132, 27);
@@ -209,43 +207,41 @@ namespace MusicAtoutV1_Gautret_Ethan
             // 
             label8.AutoSize = true;
             label8.BackColor = Color.Transparent;
-            label8.Location = new Point(465, 215);
+            label8.Location = new Point(515, 111);
             label8.Name = "label8";
             label8.Size = new Size(75, 20);
             label8.TabIndex = 15;
             label8.Text = "Naissance";
-            label8.Click += label8_Click;
             // 
             // txtNais
             // 
-            txtNais.Location = new Point(611, 208);
+            txtNais.Location = new Point(610, 108);
             txtNais.Margin = new Padding(3, 4, 3, 4);
             txtNais.Name = "txtNais";
-            txtNais.Size = new Size(67, 27);
+            txtNais.Size = new Size(92, 27);
             txtNais.TabIndex = 16;
             // 
             // label9
             // 
             label9.AutoSize = true;
             label9.BackColor = Color.Transparent;
-            label9.Location = new Point(822, 211);
+            label9.Location = new Point(809, 115);
             label9.Name = "label9";
             label9.Size = new Size(49, 20);
             label9.TabIndex = 17;
             label9.Text = "Décès";
-            label9.Click += this.label9_Click;
             // 
             // txtMort
             // 
-            txtMort.Location = new Point(874, 208);
+            txtMort.Location = new Point(864, 112);
             txtMort.Margin = new Padding(3, 4, 3, 4);
             txtMort.Name = "txtMort";
-            txtMort.Size = new Size(66, 27);
+            txtMort.Size = new Size(97, 27);
             txtMort.TabIndex = 18;
             // 
             // txtRemarque
             // 
-            txtRemarque.Location = new Point(465, 247);
+            txtRemarque.Location = new Point(464, 147);
             txtRemarque.Margin = new Padding(3, 4, 3, 4);
             txtRemarque.Multiline = true;
             txtRemarque.Name = "txtRemarque";
@@ -256,16 +252,16 @@ namespace MusicAtoutV1_Gautret_Ethan
             // 
             lbOeuvre.AutoSize = true;
             lbOeuvre.BackColor = Color.Transparent;
-            lbOeuvre.Location = new Point(465, 409);
+            lbOeuvre.Location = new Point(464, 309);
             lbOeuvre.Name = "lbOeuvre";
-            lbOeuvre.Size = new Size(212, 20);
+            lbOeuvre.Size = new Size(193, 20);
             lbOeuvre.TabIndex = 20;
-            lbOeuvre.Text = "Les oeuvres de ce compositeur";
+            lbOeuvre.Text = "Les oeuvres du compositeur";
             // 
             // dgvOeuvresCompositeur
             // 
             dgvOeuvresCompositeur.ColumnHeadersHeightSizeMode = DataGridViewColumnHeadersHeightSizeMode.AutoSize;
-            dgvOeuvresCompositeur.Location = new Point(465, 433);
+            dgvOeuvresCompositeur.Location = new Point(464, 333);
             dgvOeuvresCompositeur.Margin = new Padding(3, 4, 3, 4);
             dgvOeuvresCompositeur.Name = "dgvOeuvresCompositeur";
             dgvOeuvresCompositeur.RowHeadersWidth = 51;
@@ -284,7 +280,7 @@ namespace MusicAtoutV1_Gautret_Ethan
             // 
             AutoScaleDimensions = new SizeF(8F, 20F);
             AutoScaleMode = AutoScaleMode.Font;
-            ClientSize = new Size(1079, 863);
+            ClientSize = new Size(1079, 738);
             Controls.Add(dgvOeuvresCompositeur);
             Controls.Add(lbOeuvre);
             Controls.Add(txtRemarque);
@@ -348,6 +344,5 @@ namespace MusicAtoutV1_Gautret_Ethan
         private BindingSource bsStyle;
         private BindingSource bsCompositeur;
         private BindingSource bsOeuvre;
-        private EventHandler label9_Click;
     }
 }

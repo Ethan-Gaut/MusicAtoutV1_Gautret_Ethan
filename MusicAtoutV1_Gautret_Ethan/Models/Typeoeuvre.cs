@@ -1,7 +1,7 @@
 ﻿using System;
 using System.Collections.Generic;
 
-namespace MusicAtoutV1_Gautret_Ethan.Models;
+namespace MusicAtoutV1_Gautret.Models;
 
 public partial class Typeoeuvre
 {

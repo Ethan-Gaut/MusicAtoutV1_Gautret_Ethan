@@ -1,4 +1,4 @@
-﻿namespace MusicAtoutV1_Gautret_Ethan
+﻿namespace MusicAtoutV1_Gautret
 {
     partial class FCompositeurNation
     {
@@ -97,8 +97,8 @@
             // 
             // btAjout
             // 
-            btAjout.BackColor = Color.FromArgb(192, 255, 192);
-            btAjout.Location = new Point(10, 587);
+            btAjout.BackColor = Color.FromArgb(128, 255, 128);
+            btAjout.Location = new Point(12, 569);
             btAjout.Margin = new Padding(3, 4, 3, 4);
             btAjout.Name = "btAjout";
             btAjout.Size = new Size(86, 31);
@@ -110,7 +110,7 @@
             // btModif
             // 
             btModif.BackColor = Color.FromArgb(255, 192, 128);
-            btModif.Location = new Point(103, 587);
+            btModif.Location = new Point(389, 569);
             btModif.Margin = new Padding(3, 4, 3, 4);
             btModif.Name = "btModif";
             btModif.Size = new Size(122, 31);
@@ -121,11 +121,11 @@
             // 
             // btSupp
             // 
-            btSupp.BackColor = Color.Red;
-            btSupp.Location = new Point(232, 587);
+            btSupp.BackColor = Color.FromArgb(255, 128, 128);
+            btSupp.Location = new Point(770, 569);
             btSupp.Margin = new Padding(3, 4, 3, 4);
             btSupp.Name = "btSupp";
-            btSupp.Size = new Size(97, 31);
+            btSupp.Size = new Size(131, 31);
             btSupp.TabIndex = 6;
             btSupp.Text = "Supprimer";
             btSupp.UseVisualStyleBackColor = false;
