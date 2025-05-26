@@ -151,17 +151,67 @@ namespace MusicAtoutV1_Gautret.Models
             return sb.ToString();
         }
 
-        
-        public static bool validConnexion(string id, string mp)
+
+        /*public static bool validConnexion(string id, string mp)
         {
             string message = "";
             // Ecrire le code qui renvoie le message à afficher et mets à jour les variables utilisateurConnecte et connexionValide,
             // la comparaison des mots de passes se fera via utilisateurConnecte.passwd.Substring(2).Equals(GetMd5Hash(mp))
-            if(monModel.Utilisateurs.Where(x => x.IdUtilisateur == id).ToList().Count == 1)
+            /*  if(monModel.Utilisateurs.Where(x => x.IdUtilisateur == id).ToList().Count == 1)
+              {
+                  utilisateurConnecte = monModel.Utilisateurs.Where(x => x.IdUtilisateur == id).ToList()[0];
+
+                  if (utilisateurConnecte.Nbessais == 4) 
+                  {
+                      if (utilisateurConnecte.Passwd.Substring(2).Equals(GetMd5Hash(mp)))
+                      {
+                          connexionValide = true;
+                          utilisateurConnecte.Nbessais = 0;
+
+                          FChangementMdp fChangementMdp = new FChangementMdp();
+                          fChangementMdp.ShowDialog();
+                      }
+                  }
+
+                  if(utilisateurConnecte.Actif && utilisateurConnecte.Nbessais < 3)
+                  {
+                      if (utilisateurConnecte.Passwd.Substring(2).Equals(GetMd5Hash(mp)))
+                      {
+                          connexionValide = true;
+                          utilisateurConnecte.Nbessais = 0;
+                      }
+                      else
+                      {
+                          utilisateurConnecte.Nbessais++;
+                          message += "Nom d'utilisateur ou mot de passe incorrect\n";
+                          connexionValide = false;
+                          if (utilisateurConnecte.Nbessais > 3)
+                          {
+                              message += "Nombre d'essai dépassé. Patientez avant une nouvelle tentative.\n";
+                              utilisateurConnecte.Actif = false;
+                          }
+                      }
+                  }
+                  else
+                  {
+                      connexionValide = false;
+                      message += "Compte Désactivé...";
+                      if(utilisateurConnecte.Nbessais == 3 && utilisateurConnecte.Actif)
+                      {
+                          utilisateurConnecte.Actif = false;
+                      }
+                  }
+              }
+            if (monModel.Utilisateurs.Where(x => x.IdUtilisateur == id).ToList().Count == 1)
             {
                 utilisateurConnecte = monModel.Utilisateurs.Where(x => x.IdUtilisateur == id).ToList()[0];
 
-                if (utilisateurConnecte.Nbessais == 4) 
+                if (!utilisateurConnecte.Actif)
+                {
+                    connexionValide = false;
+                    message += "Compte Désactivé...";
+                }
+                else if (utilisateurConnecte.Nbessais == 4)
                 {
                     if (utilisateurConnecte.Passwd.Substring(2).Equals(GetMd5Hash(mp)))
                     {
@@ -171,9 +221,19 @@ namespace MusicAtoutV1_Gautret.Models
                         FChangementMdp fChangementMdp = new FChangementMdp();
                         fChangementMdp.ShowDialog();
                     }
+                    else
+                    {
+                        utilisateurConnecte.Nbessais++;
+                        message += "Nom d'utilisateur ou mot de passe incorrect\n";
+                        connexionValide = false;
+                        if (utilisateurConnecte.Nbessais > 3)
+                        {
+                            message += "Nombre d'essai dépassé. Patientez avant une nouvelle tentative.\n";
+                            utilisateurConnecte.Actif = false;
+                        }
+                    }
                 }
-
-                if(utilisateurConnecte.Actif && utilisateurConnecte.Nbessais < 3)
+                else if (utilisateurConnecte.Nbessais < 3)
                 {
                     if (utilisateurConnecte.Passwd.Substring(2).Equals(GetMd5Hash(mp)))
                     {
@@ -196,7 +256,7 @@ namespace MusicAtoutV1_Gautret.Models
                 {
                     connexionValide = false;
                     message += "Compte Désactivé...";
-                    if(utilisateurConnecte.Nbessais == 3 && utilisateurConnecte.Actif)
+                    if (utilisateurConnecte.Nbessais == 3 && utilisateurConnecte.Actif)
                     {
                         utilisateurConnecte.Actif = false;
                     }
@@ -214,7 +274,153 @@ namespace MusicAtoutV1_Gautret.Models
 
             monModel.SaveChanges();
             return connexionValide;
+        }*/
+        public static bool validConnexion(string id, string mp)
+        {
+            string message = "";
+
+            if (monModel.Utilisateurs.Where(x => x.IdUtilisateur == id).ToList().Count == 1)
+            {
+                utilisateurConnecte = monModel.Utilisateurs.Where(x => x.IdUtilisateur == id).ToList()[0];
+
+                if (!utilisateurConnecte.Actif)
+                {
+                    connexionValide = false;
+                    message += "Compte Désactivé...";
+                    utilisateurConnecte.Actif = false;
+                    monModel.SaveChanges(); // Sauvegarde immédiate de la désactivati
+                }
+                else if (utilisateurConnecte.Nbessais == 4)
+                {
+                    if (utilisateurConnecte.Passwd.Substring(2).Equals(GetMd5Hash(mp)))
+                    {
+                        connexionValide = true;
+                        utilisateurConnecte.Nbessais = 0;
+
+                        FChangementMdp fChangementMdp = new FChangementMdp();
+                        fChangementMdp.ShowDialog();
+                    }
+                    else
+                    {
+                        utilisateurConnecte.Nbessais++;
+                        message += "Nom d'utilisateur ou mot de passe incorrect\n";
+                        connexionValide = false;
+                        if (utilisateurConnecte.Nbessais > 3)
+                        {
+                            // Ici, on demande le changement de mot de passe
+                            FChangementMdp fChangementMdp = new FChangementMdp();
+                            var result = fChangementMdp.ShowDialog();
+                            if (result == System.Windows.Forms.DialogResult.OK)
+                            {
+                                utilisateurConnecte.Nbessais = 0;
+                                connexionValide = true;
+                                message += "Mot de passe changé, vous êtes connecté.\n";
+                            }
+                            else
+                            {
+                                message += "Nombre d'essai dépassé. Patientez avant une nouvelle tentative ou changez votre mot de passe.\n";
+                                connexionValide = false;
+                                utilisateurConnecte.Actif = false;
+                                monModel.SaveChanges(); // Sauvegarde immédiate de la désactivati
+                            }
+                        }
+                    }
+                }
+                else if (utilisateurConnecte.Nbessais < 3)
+                {
+                    if (utilisateurConnecte.Passwd.Substring(2).Equals(GetMd5Hash(mp)))
+                    {
+                        connexionValide = true;
+                        utilisateurConnecte.Nbessais = 0;
+                    }
+                    else
+                    {
+                        utilisateurConnecte.Nbessais++;
+                        message += "Nom d'utilisateur ou mot de passe incorrect\n";
+                        connexionValide = false;
+                        if (utilisateurConnecte.Nbessais > 3)
+                        {
+                            // Ici, on demande le changement de mot de passe
+                            FChangementMdp fChangementMdp = new FChangementMdp();
+                            var result = fChangementMdp.ShowDialog();
+                            if (result == System.Windows.Forms.DialogResult.OK)
+                            {
+                                utilisateurConnecte.Nbessais = 0;
+                                connexionValide = true;
+                                message += "Mot de passe changé, vous êtes connecté.\n";
+                            }
+                            else
+                            {
+                                message += "Nombre d'essai dépassé. Patientez avant une nouvelle tentative ou changez votre mot de passe.\n";
+                                connexionValide = false;
+                            }
+                        }
+                    }
+                }
+                else
+                {
+                    connexionValide = false;
+                    message += "Compte Désactivé...";
+                    if (utilisateurConnecte.Nbessais == 3 && utilisateurConnecte.Actif)
+                    {
+                        utilisateurConnecte.Actif = false;
+                    }
+                }
+            }
+            else
+            {
+                message += "Nom d'utilisateur ou mot de passe incorrect\n";
+            }
+
+            if (message != "")
+            {
+                MessageBox.Show(message);
+            }
+
+            monModel.SaveChanges();
+            return connexionValide;
         }
+
+
+
+        /*  public static bool ChangeMdp(string ancien, string nouveau, string confirmation)
+          {
+              string message = "";
+              string hashAncien = GetMd5Hash(ancien);
+              string hashNouveau = GetMd5Hash(nouveau);
+
+              if (nouveau != confirmation) // Vérifie si le mot de passe de confirmation est identique au nouveau mot de passe
+              {
+                  message = "Les mots de passe ne correspondent pas.";
+              }
+              else if (!utilisateurConnecte.Passwd.Substring(2).Equals("0x"+ hashAncien)) // Vérifie si l'ancien mot de passe est correct
+              {
+                  message = "Ancien mot de passe incorrect.";
+              }
+              else if (!MotDePasseValide(nouveau)) // Vérifie si le nouveau mot de passe respecte les règles
+              {
+                  message = "Le mot de passe ne respecte pas les règles.";
+              }
+              else
+              {
+                  utilisateurConnecte.Passwd = hashNouveau;
+
+                  using (var db = new Sio2musicAtoutGautretContext())
+                  {
+                      var user = db.Utilisateurs.FirstOrDefault(u => u.IdUtilisateur == utilisateurConnecte.IdUtilisateur);
+                      if (user != null)
+                      {
+                          user.Passwd = "0x" + hashNouveau;
+                          db.SaveChanges();
+                      }
+                  }
+
+                  return true; // Succès
+              }
+
+              MessageBox.Show(message);
+              return false;
+          }*/
 
         public static bool ChangeMdp(string ancien, string nouveau, string confirmation)
         {
@@ -222,21 +428,22 @@ namespace MusicAtoutV1_Gautret.Models
             string hashAncien = GetMd5Hash(ancien);
             string hashNouveau = GetMd5Hash(nouveau);
 
-            if (nouveau != confirmation) // Vérifie si le mot de passe de confirmation est identique au nouveau mot de passe
+            if (nouveau != confirmation)
             {
                 message = "Les mots de passe ne correspondent pas.";
             }
-            else if (!utilisateurConnecte.Passwd.Substring(2).Equals("0x"+ hashAncien)) // Vérifie si l'ancien mot de passe est correct
+            // Comparaison correcte : on compare le hash calculé à la partie hashée du mot de passe stocké (sans "0x")
+            else if (utilisateurConnecte.Passwd == null || !utilisateurConnecte.Passwd.Substring(2).Equals(hashAncien))
             {
                 message = "Ancien mot de passe incorrect.";
             }
-            else if (!MotDePasseValide(nouveau)) // Vérifie si le nouveau mot de passe respecte les règles
+            else if (!MotDePasseValide(nouveau))
             {
                 message = "Le mot de passe ne respecte pas les règles.";
             }
             else
             {
-                utilisateurConnecte.Passwd = hashNouveau;
+                utilisateurConnecte.Passwd = "0x" + hashNouveau;
 
                 using (var db = new Sio2musicAtoutGautretContext())
                 {
@@ -248,7 +455,7 @@ namespace MusicAtoutV1_Gautret.Models
                     }
                 }
 
-                return true; // Succès
+                return true;
             }
 
             MessageBox.Show(message);
@@ -317,7 +524,27 @@ namespace MusicAtoutV1_Gautret.Models
                 }
 
                 //
-                if (UtilisateurConnecte.Droits == 3 && vretour)
+                /*  if (UtilisateurConnecte.Droits == 3 && vretour)
+                  {
+                      Utilisateur newUser = new Utilisateur
+                      {
+                          IdUtilisateur = id,
+                          Droits = droits,
+                          Actif = true,
+                          Nbessais = 4,
+                          Passwd = "0x" + GetMd5Hash(mdp)
+                      };
+
+                      monModel.Utilisateurs.Add(newUser);
+                      monModel.SaveChanges();
+                      MessageBox.Show($"Utilisateur {id} ajouté avec succès.");
+                  }
+                  else
+                  {
+                      MessageBox.Show("Vous n'avez pas les droits pour créer un utilisateur.");
+                      vretour = false;
+                  }*/
+                if (UtilisateurConnecte.Droits >= 3 && vretour)
                 {
                     Utilisateur newUser = new Utilisateur
                     {
